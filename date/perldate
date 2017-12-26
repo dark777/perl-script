@@ -1,0 +1,11 @@
+#!/usr/bin/env perl
+
+# 1998091509 = 1998, September, 15th, 9am local time zone
+($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime;
+
+# localtime returns year minus 1900
+$year = $year + 1900;
+
+# print date.
+printf("\n\t%2d:%2d:%2d %02d/%02d/%04d\n\n",$hour, $min, $sec, $mday, 1+$mon, $year);
+ 

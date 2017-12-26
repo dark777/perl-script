@@ -1,0 +1,31 @@
+#!/usr/bin/env perl
+
+# -----------------------------------------------------------------
+#
+# syntax: perl explodejar or ./explodejar
+#
+# Description:
+# explodejar unpacks the .jar files created by java 
+# -----------------------------------------------------------------
+
+@dirs = `pwd`;
+
+foreach $dir (@dirs) 
+{
+    chop($dir);
+    if (-l $dir) {
+        print "Skipping symbolic link $dir\n";
+        next;
+    }
+    print "Unzipping $dir/*.jar\n";
+    system ("unzip", "-o", "$dir/*.jar",
+            "-d", "$dir");
+    system ("rm", "-rf", "$dir/META-INF");
+    mkdir "$dir/include", 0755;
+    print "Unzipping $dir/*.jar\n";
+    system ("unzip", "-o", "-aa",
+            "$dir/*.jar",
+            "-d", "$dir/include");
+    system ("rm", "-rf", "$dir/include/META-INF");
+}
+# --- end explodejar ----------------------------------------------
