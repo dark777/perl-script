@@ -8,4 +8,20 @@ $year = $year + 1900;
 
 # print date.
 printf("\n\t%2d:%2d:%2d %02d/%02d/%04d\n\n",$hour, $min, $sec, $mday, 1+$mon, $year);
+
+sub get_date{
+
+   @days = ('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+   @months = ('January','February','March','April','May','June','July',
+              'August','September','October','November','December');
+
+   ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
+   if ($hour < 10) { $hour = "0$hour"; }
+   if ($min < 10) { $min = "0$min"; }
+   if ($sec < 10) { $sec = "0$sec"; }
+   #Y2K COMPLIANT
+   $year = $year + 1900;	
+   $date = "$days[$wday], $months[$mon] $mday, $year at $hour\:$min\:$sec";
+}
+
  
