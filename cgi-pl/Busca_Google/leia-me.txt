@@ -1,0 +1,19 @@
+Google Busca (Fast Searcher)
+esse pesquisa em português ;)
+https://www.scriptbrasil.com.br/script/cgi/Busca%20google.zip
+
+Criação de White Snake
+http://forum.wmonline.com.br/index.php?showuser=870
+
+Dúvidas?
+www.cgiclube.net/forum/
+
+Como usar?
+Envie o script para o seu servidor (em modo ASCII), aplique o chmod 755 e use-o.
+
+CGiClube.net
+www.cgiclube.net
+www.cgiclube.net/forum
+
+
+
