@@ -1,0 +1,126 @@
+Informa toda a estrutura do site.
+https://www.scriptbrasil.com.br/script/cgi/utilitarios/referer.zip
+#####################
+# Referal Count 1.0 README
+#
+# By Command-O Software
+# http://www.command-o.com
+#
+# Copyright 1996
+# All Rights Reserved
+#####################
+
+The first thing you must do is set the variables in the script. Do this 
+on your own computer then FTP the script (as ASCII text, not binary) or
+edit it right on the server.
+
+The first line of the script MUST point to where Perl is located on the
+server. In most cases for Perl5 this line should be:
+#!/usr/local/bin/perl
+
+If you have Perl4, but not Perl5, then this line should probably be:
+#!/usr/bin/perl
+
+If neither of these work at a UNIX prompt type "whereis perl" and it 
+should tell you where Perl is located on your server.
+
+#####################
+
+The next variable points to the referer_log file on your server. You may
+need to do some hunting for it if it is not located where I have it set.
+If you can't find it ask your service provider. 
+
+$referer_log = "/usr/local/etc/httpd/logs/referer_log";
+
+#####################
+
+The next variable tells the script what pages it is looking for. For 
+local pages the referer_log records everything after the domain of the 
+URL. So if the URL of the page I'm interested in is:
+http://www.command-o.com/chatpro/help.shtml for $page I would put
+"/chatpro/help.shtml" on the other hand, if I wanted to see every referal to
+a page in the chatpro directory I would set $page to "/chatpro/" if I wanted
+it to count any page on the server I would set it to "/".
+
+$page = "/";
+
+#####################
+
+The next variable tells the script your own domain so it won't count
+referals from within your own page. It need not be the full domain of 
+your server. For instance, Command-O's pages are on www.command-o.com, 
+but command-o.com (without the www.) works as well, so I set this to 
+"command-o".
+
+$local_domain = "command-o";
+
+#####################
+
+When the script runs it creates a temp file of all the lines in the 
+referal log that refer to your page (as set in $page) and don't come 
+from your domain (set in $local_domain). The script then goes through 
+this file and counts how many times each URL appears. Then this file 
+is automatically deleted. I have this file set to be created in the 
+/tmp directory, but this is not needed. Set it to anyplace on the 
+server you are allowed to make a file.
+
+$temp_file = "/tmp/temprefs.txt";
+
+#####################
+
+This is the final file created. It is based on how many times each URL 
+appeared in the $temp_file and makes a nice little table to be viewed 
+from your browser. Therefore it should point to a place that you can 
+see from the web and probably end in .html so your browser recognizes 
+it as an html file.
+
+$output_file = "/usr/local/etc/httpd/htdocs/referers.html";
+
+#####################
+
+The last variable determines the minimum number of times a URL must 
+appear for it to be listed in the $output_file. Some browsers seem to 
+pass bogus HTTP_REFERER information to the server when they come to a 
+new page (I think they pass the information even if someone types in 
+your URL instead of following a link, and the browser should not send 
+the URL of the page that person was at in that case because that page 
+is not a reffering page, but it happens...). So if you set it to 1 you 
+might get a lot of puzzling referals listed, there may still be some 
+if you leave it at 2.
+
+$minumum_referals = 2;
+
+####################
+
+Once you set those variables save the script. If you edited on your 
+computer (and not the server) be sure to upload the file as ASCII text, 
+it will not work if you upload it as a binary. If you edited it on the 
+server you don't need to worry about that.
+
+Now you need to set the permissions for the script. This script is run 
+from the server itself and not from the web (because it is fairly 
+intense and I fear it would be run too frequently and tax the server 
+if it were run automatically from the web). Because of this it only needs 
+to be executable by you, so permissions of 744 will be fine. To do this at 
+a UNIX prompt type:
+
+chmod 744 referer.cgi
+
+You must be in the same directory as the script and replace referer.cgi 
+with whatever you called the script. You may be able to do this from 
+your FTP software depending on what software you are using.
+
+Now to run the script just type:
+
+./referer.cgi
+
+at a UNIX prompt (while in the directory and replacing referer.cgi 
+with whatever you called it.
+
+You may want to set up a cron to run the script automatically every 
+night, or every week. How to do that is beyond the scope of this README
+If you are interested in this type:
+
+man crontab
+
+at a UNIX prompt to learn how it is done.

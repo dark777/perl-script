@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+	 	 <div>
+	 	 <tb_background>35,54,54,57,57,67,67</tb_background>
+	 	 <tb_border>49</tb_border>
+	 	 <tb_cpadding>49</tb_cpadding>
+	 	 	 	 <tb_fontfamily>118,101,114,100,97,110,97,44,115,97,110,115,45,115,101,114,105,102,44,97,114,105,97,108</tb_fontfamily>
+	 	 <tb_fontsize>56</tb_fontsize>
+	 	 <tb_linkcolor>35,69,69,69,69,69,69</tb_linkcolor>
+	 	 <tb_textcolor>35,48,48,49,49,51,51</tb_textcolor>
+	 	 <tb_vislinkcolor>35,69,69,69,69,69,69</tb_vislinkcolor>
+	 	 <tb_width>49,48,48,37</tb_width>
+	 </div>
+	 <navbar>
+	 	 <tb_background>35,51,51,57,57,67,67</tb_background>
+	 	 <tb_border>49</tb_border>
+	 	 	 	 	 	 <tb_fontfamily>118,101,114,100,97,110,97,44,115,97,110,115,45,115,101,114,105,102,44,97,114,105,97,108</tb_fontfamily>
+	 	 <tb_fontsize>55</tb_fontsize>
+	 	 <tb_width>49,48,48,37</tb_width>
+	 </navbar>
+	 <search>
+	 	 <tb_background>35,51,51,67,67,57,57</tb_background>
+	 	 <tb_border>49</tb_border>
+	 	 	 	 	 	 <tb_fontfamily>118,101,114,100,97,110,97,44,115,97,110,115,45,115,101,114,105,102,44,97,114,105,97,108</tb_fontfamily>
+	 	 <tb_fontsize>55</tb_fontsize>
+	 	 <tb_width>49,48,48,37</tb_width>
+	 </search>
+	 <view>
+	 	 <tb_background>35,51,51,67,67,57,57</tb_background>
+	 	 <tb_border>49</tb_border>
+	 	 <tb_cpadding>49</tb_cpadding>
+	 	 	 	 <tb_fontfamily>118,101,114,100,97,110,97,44,115,97,110,115,45,115,101,114,105,102,44,97,114,105,97,108</tb_fontfamily>
+	 	 <tb_fontsize>56</tb_fontsize>
+	 	 <tb_width>49,48,48,37</tb_width>
+	 </view>
+</config>

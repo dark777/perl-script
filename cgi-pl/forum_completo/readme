@@ -1,0 +1,172 @@
+Forum completo
+https://www.scriptbrasil.com.br/script/cgi/forum_completo.zip
+###################################################################### 
+#
+#     Dream Catchers CGI Scripts               Feel free to modify 
+#     Message Board                            this script to your 
+#     Created by Seth Leonard                  needs, but please
+#     for Dream Catchers Technologies, Inc.    keep this portion so
+#                                              that I get credit.  
+#     http://dreamcatchersweb.com/scripts      The same goes for 
+#                                              distribution.
+#
+#     (c)1996/1997 Dream Catchers Technologies, Inc.,
+#     All Rights Reserved
+#
+######################################################################
+Dream Catchers Technologies, Inc. provides this script free of charge.  However, if you do use this script, a $1.00 donation is appreciated to help support this free resource.  Please send $1.00 to:
+
+Dream Catchers Technologies, Inc.
+P.O. Box 8600
+Kirkland, WA 90834
+(make payments payable to Dream Catchers Technologies, Inc.)
+
+Step by step instructions for Message Board
+
+CONTENTS:
+
+board.cgi - the cgi script which operates your message board program
+admin.cgi - the cgi script which allows you to delete old messages
+data.txt - a file keeping track of how many messages you have
+password.txt - a file containing your admin password
+whatisit.txt - a file telling you about the basics of Message Board
+readme - this file
+login.html - a sample html page to use as a login page
+register.html - a sample html page to use as a register page
+
+Follow these easy steps:
+
+1.  Please read the whatisit.txt file included to understand how this script works and for instructions on how to use it once it is installed.
+
+2.  Contact your server.  Ask them to create a cgi-bin directory for you.  Also ask them how one can access a file in that directory from WWW.  Usually this is "http://www.server.com/cgi-bin/you/".
+
+3.  If you have telnet access to your server, log onto your server.  At the command prompt, type "which perl".  Write down the line given to you.  Usually this is /usr/local/bin/perl.  Next, type "which date".  Write down the line given to you.  Usually this is /bin/date. If you do not have telnet access, ask your server where the perl and date programs reside.
+
+4.  Using your favorite text editor, open the board.cgi file included in the files you downloaded from the Dream Catchers CGI Scripts page.
+
+5.  The first line of board.cgi has the line: 
+
+#!/usr/local/bin/perl
+
+If the line you recieved from your server when you typed "which perl" is different, replace the one there.  Keep the #! and don't change anything if it is the same one you were given.
+
+6.  Find the section that says "ONLY EDIT THIS PART OF THE SCRIPT" and change the vaiables so that the match your home directory.
+
+NOTE: The values already placed there are examples!!  These are the common formats for how servers set up directories.  You need to fill in your own values!  DO NOT DELETE THE CHARACTERS OUTSIDE OF THE VALUES: ' " ;
+
+For example, $loginpage is the url for your login page, so you would change:
+
+$loginpage = "http://server.com/board/login.html";
+
+you would change to:
+
+$loginpage = "http://www.microsoft.com/~billgates/board/login.html";
+
+Change the values of:
+
+$userdir = The absolute path to the directory which you want to hold the user files.  This should either be a full path, such as "/home/user/board/users" or a relative one such as "users" or "../users". You must create this directory.
+
+$datafile = Is the path to the file which holds the message count.  This file is included in the download package.  This should either be a full path, such as "/home/user/board/data.txt" or a relative one such as "data.txt" or "../data.txt".
+
+$messagedir = The absolute path to the directory which you want to hold the message files.  This should either be a full path, such as "/home/user/board/messages" or a relative one such as "messages" or "../messages". You must create this directory.
+
+$responsedir = The absolute path to the directory which you want to hold the response files.  This should either be a full path, such as "/home/user/board/responses" or a relative one such as "responses" or "../responses". You must create this directory.
+
+$archivedir = The absolute path to the directory which you want to hold the archive files.  This should either be a full path, such as "/home/user/board/archives" or a relative one such as "archives" or "../archives". You must create this directory.
+
+$dateprogram = The program location you got when you asked "which date".
+
+$bgcolor = Is the color of the background you would like your message board to have.  Default is white.
+
+$textcolor = Is the color of the text you would like your message board to have.  Default is black.
+
+$linkcolor = Is the color of the links you would like your message board to have.  Default is blue.
+
+$boardname = The name of your message board.
+
+$loginpage = The url of the page which users will be asked to log in to to see the message board.
+
+$script = The url of this script.
+
+7.  You are done changing this file.  Save the file as board.cgi.
+
+8.  Using your favorite text editor, open the admin.cgi file included in the files you downloaded from the Dream Catchers CGI Scripts page.
+
+9.  The first line of admin.cgi has the line: 
+
+#!/usr/local/bin/perl
+
+If the line you recieved from your server when you typed "which perl" is different, replace the one there.  Keep the #! and don't change anything if it is the same one you were given.
+
+10.  Find the section that says "ONLY EDIT THIS PART OF THE SCRIPT" and change the vaiables so that the match your home directory.
+
+NOTE: The values already placed there are examples!!  These are the common formats for how servers set up directories.  You need to fill in your own values!  DO NOT DELETE THE CHARACTERS OUTSIDE OF THE VALUES: ' " ;
+
+For example, $adminscript is the url for the admin script, so you would change:
+
+$adminscript = "http://server.com/cgi-bin/admin.cgi";
+
+you would change to:
+
+$adminscript = "http://www.microsoft.com/~billgates/cgi-bin/admin.cgi";
+
+Change the values of:
+
+$passwordfile = The absolute path to the password.txt which was included in the download package.  This should either be a full path, such as "/home/user/board/password.txt" or a relative one such as "password.txt" or "../password.txt".
+
+$messagedir = The absolute path to the directory which you want to hold the message files.  This should either be a full path, such as "/home/user/board/messages" or a relative one such as "messages" or "../messages". You should have alread created this directory.
+
+$responsedir = The absolute path to the directory which you want to hold the response files.  This should either be a full path, such as "/home/user/board/responses" or a relative one such as "responses" or "../responses". You should have alread created this directory.
+
+$adminscript = The url of this script.
+
+11.  You are done changing this file.  Save the file as admin.cgi.
+
+12.  Open the login.html file that came with the messageboard.zip files you downloaded off of Dream Catchers CGI Scripts Page.  Change the line:
+
+<FORM METHOD="GET" ACTION="http://server.com/cgi-bin/board.cgi">
+
+by replacing "server.com/cgi-bin" with the address that your server gave you to access your cgi-bin from the WWW.  Usually this is "www.server.com/cgi-bin/you".
+
+13.  Edit the login.html file to match however you would like your page to look. YOU SHOULD NOT CHANGE ANYTHING BETWEEN THE <FORM> TAG AND THE </FORM> TAG EXCEPT THE URL OF THE SCRIPT. You probably want to include a link to the registration page.
+
+14.  Open the register.html file that came with the messageboard.zip files you downloaded off of Dream Catchers CGI Scripts Page.  Change the line:
+
+<FORM METHOD="GET" ACTION="http://server.com/cgi-bin/board.cgi">
+
+by replacing "server.com/cgi-bin" with the address that your server gave you to access your cgi-bin from the WWW.  Usually this is "www.server.com/cgi-bin/you".
+
+15.  Edit the register.html file to match however you would like your page to look. YOU SHOULD NOT CHANGE ANYTHING BETWEEN THE <FORM> TAG AND THE </FORM> TAG EXCEPT THE URL OF THE SCRIPT. You probably want to include a link to the registration page.
+
+16.  Save both files.
+
+17.  Upload all .cgi files into your cgi-bin and .htm or .html files to any directory that can be accessed via the web (many servers require that you upload these types of files in ASCII format, check with your server administrator to be sure).
+
+18.  You now need to set the permissions of the files you've uploaded.  You can do this one of two ways.  
+
+	1. TELNET - telnet into your server and go to the directory which holds the files.  Type chmod [permission] filename.  For example: chmod 755 file.cgi.
+
+	2. FTP SOFTWARE - you'll need to find out how to change permissions of the files using your specific program.  Using WS_FTP (recommended), select the file you want to change permissions of and click your right mouse button and select CHMOD (UNIX).  A box will appear with the option to select any number of 9 separate boxes (top row for read, middle row for write, bottom row for execute).  These translate into actual unix permissions.  If the file needs to be a+rx or 755, select every read box and every execute box (that is every box on the top and bottom rows).  If the file needs to be a+rw or 666, select every read box and every write box (that is every box on the top and middle rows).  These are the only two permissions you need to worry about.
+
+The files included need to following permissions:
+
+board.cgi     a+rx or 755
+admin.cgi     a+rx or 755
+data.txt      a+rw or 666
+password.txt  a+rw or 666
+
+You also need to set the permission of your directories:
+
+users     a+rw or 666
+messages  a+rw or 666
+reponses  a+rw or 666
+archives  a+rw or 666
+
+If you have telnet access, you can also check your scripts for errors by going to the directory they reside in and typing either perl filename.cgi or filename.cgi (depends on your server).  If you get an error, you most likely edited the script where you shouldn't have or forgot to put a " or ; on one of your variable definitions.
+
+19.  Load the register.htm page from the internet, fill in the form, and you should be on your way.  Everything working?
+
+20.  Smile, you're done...
+
+All working?  Great!  You now have a Message Board.  If there are problems, please consult http://dreamcatchersweb.com/scripts and chose the Frequently Asked Questions option.  You can also post a message on the User Forum asking for help from other users.  Please do not send email, it WILL NOT be answered.  I apologize for this, but there were just too many requests to be able to offer quality help for all as well as work on new projects.
+

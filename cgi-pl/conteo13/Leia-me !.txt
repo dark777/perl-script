@@ -1,0 +1,18 @@
+#######################################################
+#          Home Page: http://www.cgiclube.net         #
+#                                                     #
+#######################################################
+#######################################################
+Com um simples formulario e uma fácil configuração, 
+você rapidamente terá um sistema que indica seu site para um amigo. 
+Nesta versão, o Conteo envia um email 
+padrão que serve para qualquer tema de site.
+
+Download feito no Site : https://www.scriptbrasil.com.br/script/cgi/conteo13.zip
+
+        -------------------------
+        www.  CGiClube . Net
+        -------------------------
+
+Qualquer dúvida na instalação desse CGI entre em nosso 
+Web Site que esclarecemos para você

@@ -1,0 +1,227 @@
+<html>
+<head>
+	<title>Simulados</title>
+</head>
+<body bgcolor="white"><center>
+<br>
+<A HREF="http://www.todavia.com.br" TARGET="_top"><IMG SRC="../banner_todavia.gif" border="0"></A><br>
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0"width="570">
+<TR>
+  
+        <TD valign="top"><font face="verdana, mas sans serif, arial" size="-1">
+
+<P>
+
+
+<BODY bgcolor="white"><center><FONT FACE="verdana, ms sans serif, ms serif, arial, helvetica" SIZE="-2">
+
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">
+<TR>
+  
+        <TD valign="top"><font face="verdana, mas sans serif, arial" size="-1">
+
+
+                <TABLE BORDER="0" WIDTH="100%" CELLSPACING="0" CELLPADDING="5">
+                        <TR VALIGN="TOP">
+                                <TD>&nbsp;</TD>
+                                <TD >
+                                        <FONT size="3" FACE="verdana, sans-serif">
+                                        <B>Teste Simulado - T-TS1</B>
+                                        </font>
+                                        <p>
+                                        <FONT size="-1" FACE="verdana, sans-serif">
+                                        
+<blockquote>
+<B>DIFICULDADE:</B><BR>
+Instalação Simples<BR>
+<IMG SRC="../estrela_on.gif"><IMG SRC="../estrela_off.gif"><IMG SRC="../estrela_off.gif"><P>
+
+<B>FUNCIONAMENTO:</B><BR>
+O T-TS1 é um teste de múltipla escolha presente em duas versões: Padrão, com os dados de configuração na página HTML e STD com dados de configuração em arquivo externo. A versão Padrão permite que o usuário veja o resultado com facilidade, por este motivo, é tratada como "versão com cola".<BR>
+Nos dois modelos, após o envio do formulário, o sistema avalia as respostas e emite um resultado. Se o resultado for maior que a metade do total geral (média 5), é emitido um certificado para o participante.<P>
+
+<B>APARATOS NECESSÁRIOS</B><BR>
+<LI>Um editor de textos tipo ASCII (Bloco de Notas do Windows, HTML Tools, Etc...)
+<LI>Programa de FTP para o up-load
+<LI>Para a instalação você escolhe: Programa de Telnet ou Programa FTP que permite alterar permissões (veja mais detalhes na seção de Instalação). 
+<P>
+
+<B>SISTEMA NECESSÁRIO:</B><BR>
+O T-TS1 foi testado em Sistema Operacional UNIX, mas nada o impede de rodar sob qualquer versão do Linux.<BR>
+O Funcionamento em Windows NT deve ser mediante teste.<BR>
+Requer o Perl 5 ou superior.<P>
+
+<B>LICENÇA:</B><BR>
+
+Freeware (Licença grátis)<BR>
+Se você se sentir estimulado a pagar, faça uma doação de qualquer tipo a uma pessoa necessitada.<BR>
+Para instalar em mais de um servidor, por favor, volte ao nosso site e faça um novo cadastro.<P>
+</blockquote>
+
+<B>INSTALAÇÃO:</B><BR>
+
+<b>1. Definindo o Layout</b><br>
+ Abra o dois arquivos tipo texto com os nomes "alto.txt" e "baixo.txt" anexos neste pacote.<br>
+Cada um destes arquivos deve conter os códigos HTML de abertura e fechamento da página de resultados. São eles que irão manter a página do resultado com mesmo layout do resto de seu website<br>
+Para entender melhor, clique abaixo para ver o conteúdo de cada um deles.<p>
+Ver o arquivo <a href="alto.txt">alto.txt</a><br>
+Ver o arquivo <a href="baixo.txt">baixo.txt</a><p>
+
+Se você tem dúvidas, mantenha-os como estão e após os primeiros testes, quando você entender a função de cada um deles, faça as alterações.<p>
+
+<b>2. Configurando o sistema</b><br>
+ Toda a configuração do sistema é feita na página HTML que contém o formulário com as perguntas.<p>
+Abra o arquivo <b>simulado.html</b> com seu editor de textos preferido e atente para os seguintes detalhes:<p>
+
+<font size="-2">
+
+
+&lt;FORM ACTION="<font color="#FF0000">http://www.seu_site.com/cgi-bin/simulado.cgi</font>" METHOD="POST"&gt;<br>
+<b>o texto em vermelho deve apontar para o local onde o arquivo simulado.cgi estará hospedado.</b><p>
+
+&lt;INPUT NAME="titulo" TYPE="Hidden" VALUE="<font color="#FF0000">O título</font>"&gt;<br>
+<b>Substitua o texto em vermelho pelo título do teste. Ex.: "Teste de Física Nuclear do meu site"</b><p>
+
+&lt;INPUT NAME="site_nome" TYPE="Hidden" VALUE="<font color="#FF0000">Nome do Site</font>"&gt;<br>
+<b>Substitua o texto em vermelho pelo Nome do seu Site. Ex.: "Meu Site"</b><p>
+
+&lt;INPUT NAME="site_url" TYPE="Hidden" VALUE="<font color="#FF0000">http://www.seu_site.com</font>"&gt;<br>
+<b>Substitua o texto em vermelho pela URL do seu Site.</b><p>
+
+&lt;INPUT NAME="quantas" TYPE="Hidden" VALUE="<font color="#FF0000">5</font>"&gt;<br>
+<b>Muita Atencão aqui! Substitua o texto em vermelho pela quantidade total de PERGUNTAS da página.</b><p>
+
+<b>Informe aqui as respostas corretas de cada questão (em vermelho).<br>
+Note que se vc acrescentar alguma questão, este deverá ter
+seu nome-número especifico. Ex: correta6 <br>
+<u>Atenção:</u> O modo que você digitar aqui as respostas corretas dever ser repetido de maneira IDENTICA nos blocos de reposta que virão mais abaixo.</b><br>
+&lt;INPUT NAME="correta1" TYPE="Hidden" VALUE="<font color="#FF0000">Reposta correta 1</font>"&gt;<br>
+&lt;INPUT NAME="correta2" TYPE="Hidden" VALUE="<font color="#FF0000">Reposta correta 2</font>"&gt;<br>
+&lt;INPUT NAME="correta3" TYPE="Hidden" VALUE="<font color="#FF0000">Reposta correta 3</font>"&gt;<br>
+&lt;INPUT NAME="correta4" TYPE="Hidden" VALUE="<font color="#FF0000">Reposta correta 4</font>"&gt;<br>
+&lt;INPUT NAME="correta5" TYPE="Hidden" VALUE="<font color="#FF0000">Reposta correta 5</font>"&gt;<br><p>
+
+</font>
+<font size="-1">
+
+Agora, você encontrará os Blocos de Questões.<br>
+cada Bloco deverá conter:<p>
+</font>
+
+<font size="-2">
+&lt;INPUT NAME="questao<font color="#0000FF">1</font>" TYPE="Hidden" VALUE="<font color="#0000FF">Quantos lados tem um triângulo?</font>"&gt;<br>
+<b>Cada bloco tem DUAS alterações a serm feitas nesta linha:<br>
+<li>Altere o texto em vermelho pelo título da questão (questão 1 neste caso)<br>
+<li>Altere APENAS O NÚMERO em azul pelo número da questão (Nº 1 neste caso)<p></b>
+
+
+
+&lt;LI&gt;&lt;INPUT NAME="resposta1" TYPE="Radio" VALUE="<font color="#0000FF">Resposta Errada</font>"&gt;Resposta Errada<br>
+&lt;LI&gt;&lt;INPUT NAME="resposta1" TYPE="Radio" VALUE="<font color="#0000FF">Resposta Errada</font>"&gt;Resposta Errada<br>
+&lt;LI&gt;&lt;INPUT NAME="resposta1" TYPE="Radio" VALUE="<font color="#0000FF">Resposta Correta 1</font>"&gt;<font color="#FF0000">Resposta Correta 1</font><br>
+&lt;LI&gt;&lt;INPUT NAME="resposta1" TYPE="Radio" VALUE="N.D.A."&gt;N.D.A.<br>
+<b>Repare que a resposta correta está escrita de forma IDENTICA à informada
+ no item correta1 (em vermelho). Isto é válido para todas os Blocos de questões.<br>
+ Substitua também os textos em zul por alternativas erradas (é claro)<br>
+Por se tratar de mero HTML, a ordem pode, e deve, ser alternada de questão em questão.<br>
+No bloco abaixo veja o bloco 2, e entenda melhor o funcionamento.
+</b>
+<p>
+&lt;INPUT NAME="correta2" TYPE="Hidden" VALUE="<font color="#FF0000">Laranja</font>"&gt;<br>
+<b>.<br>
+.<br>
+.<br>
+</b>
+Qual a Cor da laranja?<br>
+&lt;INPUT NAME="questao2" TYPE="Hidden" VALUE="<font color="#0000FF">Qual a cor da laranja?</font>"&gt;<br>
+&lt;LI&gt;&lt;INPUT NAME="resposta2" TYPE="Radio" VALUE="<font color="#0000FF">Azul</font>"&gt;Azul<br>
+&lt;LI&gt;&lt;INPUT NAME="resposta2" TYPE="Radio" VALUE="<font color="#0000FF">Violeta</font>"&gt;Violeta<br>
+&lt;LI&gt;&lt;INPUT NAME="Laranja" TYPE="Radio" VALUE="<font color="#0000FF">Laranja</font>"&gt;<font color="#FF0000">Laranja</font><br>
+&lt;LI&gt;&lt;INPUT NAME="resposta2" TYPE="Radio" VALUE="N.D.A."&gt;N.D.A.<p>
+<font color="#FF0000">Para você se ligar:</font><br>
+cada Bloco tem um número identico para tudo:
+<li>Resposta correta
+<li>Titulo da questão
+<li>Opções (erradas e correta)
+</b><p>
+</font>
+<font size="-1">
+
+<b>3. Alterando o arquivo simulado.cgi</b><br>
+Esta parte (para sua sorte) é a que menos requer esforço.<br>
+A única coisa que talvez precise ser feita é alterar a 1ª linha do script, que deve apontar para o interpretador PERL de seu servidor.<br>
+O programa já está com a linha mais aceita pela maioria dos servidores:<br>
+#!/usr/bin/perl<p>
+Mas há alguns servidores que requerem que a chamad seja:<br>
+#!/usr/local/bin/perl<br>
+
+para ter certeza, faça uma conexão ao seu servidor via Telnet e digite:<br>
+whereis perl<p>
+
+A resposta será verdadeira! :)<p>
+Se você não sabe, ou não tem acesso via Telnet:<br>
+Deixe como está. Caso ocorra algum problema, substitua pela segunda opção.<br>
+Se ainda assim o problema persistir, ligue para o suporte de seu servidor.<p>
+
+<b>4. Instalando e testando.</b><p>
+
+Faça o upload da página HTML para a área web de seu servidor (public_html, htdocs, www...).<br>
+Agora, faça o upload dos arquivos<br>
+<li>simulado.cgi
+<li>alto.txt
+<li>baixo.txt<br>
+para a pasta CGI-BIN.<br>
+Altere a permissão Unix do arquivo simulado.cgi para 755 (rwx-rx-rx) e...<br>
+pronto!<p>
+Agora teste seu programa!.<p>
+
+<hr>
+<b>Algo deu errado?</b><p>
+
+<b>Erro 404 Not Found</b><br>
+<li>Na página HTML, veja se o TAG FORM está com o valor do atributo ACTION apontando para o local onde você instalou o arquivo simulado.cgi
+<li>Certifique-se de que realmente fez o upload do arquivo simulado.cgi para a pasta CGI-BIN<p>
+
+
+<b>Erro 500 internal server error</b><br>
+<li>Altere a permissão Unix do arquivo simulado.cgi para 755
+<li>Se você alterou algum código do programa, jogue-o fora e reinicie todo o processo de upload
+<li>Certifique-se de fazer o upload no modo ASCII
+<li>Verifique se a primeira linha do script aponta para o interpretador PERL de seu servidor
+<li>Altere a permissão Unix dos arquivos alto.txt e baixo.txt para 777 (rwx-rwx-rwx)<p>
+
+
+<b>403 Forbidden</b><br>
+<li>A pasta onde você instalou o arquivo simulado.cgi não está apta para rotinas CGI
+<li>Você está chamando o cgi em uma pasta que não aceita rotinas CGI.<p>
+
+
+
+
+
+
+
+
+
+	</TD>
+<!--Rotinas da Loja-fim-->
+</TR>
+<TR>
+        <TD colspan="3"><hr></td>
+</TR>
+<TR>
+        
+        <TD colspan="3" align="right"><font face="verdana,ms sans serif,arial" size="-2" color="gray">©WSSystem 1999-2000 - Powered by <A HREF="http://www.todavia.com.br" TARGET="top">TodaviA</A></td>
+</TR>
+</TABLE>
+
+</td>
+</TR>
+</TABLE></td>
+</TR>
+</TABLE>
+</FORM>
+</body>
+</html>

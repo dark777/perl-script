@@ -1,0 +1,11 @@
+Instalando
+
+1. Descompacte o arquivo jGest.zip
+2. Abra os arquivos ver.pl e enviar.pl e modifique os dados do banco de dados.
+3. Crie a database que vai usar e dentro da mesma crie a tabela providenciada no jguest.sql
+   mysql <database> < jguest.sql
+4. Envie os arquivos ver.pl e enviar.pl para o servidor.
+5. jGuest instalado no servidor! (:
+
+Livro de visitas simples. Usa banco de dados mysql. Divisão de mensagens por páginas.
+https://www.scriptbrasil.com.br/script/cgi/jguest.zip

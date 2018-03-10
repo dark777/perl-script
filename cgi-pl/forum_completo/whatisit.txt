@@ -1,0 +1,36 @@
+###################################################################### 
+#
+#     Dream Catchers CGI Scripts               Feel free to modify 
+#     Message Board                            this script to your 
+#     Created by Seth Leonard                  needs, but please
+#     for Dream Catchers Technologies, Inc.    keep this portion so
+#                                              that I get credit.  
+#     http://dreamcatchersweb.com/scripts      The same goes for 
+#                                              distribution.
+#
+#     (c)1996/1997 Dream Catchers Technologies, Inc.,
+#     All Rights Reserved
+#
+######################################################################
+
+How the Message Board works.  Below is a brief summary of how the Message Board and its Administration script work.  All files or actions talked about are included in the downloaded package.
+
+The Message Board, quite simply, allows users to post messages.  Now what they need to do before they can do this is register.
+
+When they register, they must select a username to log in with, a password, and 5 aliases that they would also like to post under.  They can also enter their email address if they like (not required) and must choose whether they would like to have an archive.
+
+An archive allows a user to "save" posts that they would like others to view later, even after their message is deleted off the board.  They will have the option before each message is posted whether or not they would like to archive the message.  Each user can archive 10 messages.  If they choose to archive a message and their archive is full, the oldest message will be deleted from the archive.
+
+Once they register they need to log in for each visit to the Message Board.  After registering, they are taken to a main menu with three options.
+
+If they "View the Board" they are taken to the Message Board which is an index of all the messages posted.  From there they can post their own messages or respond to others.
+
+If they "View an Archive" they are asked to enter the name of the user who's archive they want to view.  Once that is entered they are taken to the user's archive.  User names are case sensitive and make a difference when logging in and viewing an archive.
+
+If they "Edit their Archive" they have the option of deleting messages from their archive to make room for new ones.
+
+If they logged in as a guest (log in with user name "guest"), they will not be able to post when visiting the board and will not have the option of editing their archive, as they don't have one.
+
+Now, the adminstration script is accessed by going to the url of the script.  You will be shown an html page with instructions on how the script works.  There is a box to enter a password.  The password included in this package is "password" so I suggest you change this.  The option to change your password is at the bottom of the page.
+
+That's it, have fun!!!!

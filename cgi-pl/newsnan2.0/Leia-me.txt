@@ -1,0 +1,113 @@
+######################################################################
+#                      News Nan By Renan Elias                       #
+#                                                                    #
+# Configuração: Somente configure o configuracao.cgi para que o CGI  #
+#                       funcione corretamente                        #
+#                                                                    #
+#                                                                    #
+#                                                                    #
+# Criador: Renan Silveira Elias                                      #
+# E-mail: renan@osimbr.net                                           #
+# ICQ: 89603614                                                      #
+#                                                                    #
+#    Você precisa de um CGI para seu site? Entre em contato! Crio    #
+#       seu script do modo que quiser por um preço muito bom.        #
+######################################################################
+
+############################# Versão 2.0 #############################
+#
+
+1- Todo sistema de postagem de mensagens reformulado.
+2- Corrigido Bug de Imagens.
+3- Corrigido Bug de Postagens de usuários desconehcidos.
+4- Adição de Alteração de Design da mensagem pela Web.
+5- Sistema v2.0 com correção de todos os Bugs de Cookies.
+
+Para fazer o sistema funcionar corretamente, envie os arquivos em modo 
+ASCII para a pasta escolhida.
+Dê chmod de 755 no arquivo instalar.cgi.
+Execute o instalar.cgi no Navegador.
+Ele deve dar chmod em todos os arquivos e, se a pasta usuarios ja não 
+estiver criada, ele criará a pasta.
+Se seu servidor precisar de chmod em pastas, dê chmod de 777 na pasta 
+usuarios.
+Após executar o instalar.cgi, seu sistema estará pronto para ser
+usado.
+Entre no newsnan.cgi pelo navegador e comece a utilizar o programa.
+
+PS: Se estiver atualizando seu sistema, não sobrescreva o arquivo
+novidades.txt nem usuarios.rse
+
+Obrigado por utilizar o sistema NewsNan.
+www.scripts.osimbr.net
+
+#
+######################################################################
+
+############################# Versão 1.0 #############################
+#
+
+Este Sistema foi elaborado por Renan Elias para acabar com antigo
+sistema de SSI.
+Agora com este Script você pode adicionar em qualquer site e em 
+qualquer servidor as notícias mais atuais, postadas pelos webmasters.
+Nosso sistema possui uma área administrativa com opção de Apagar
+Membros, adicionar Membros e apagar mensagens.
+
+Para fazer este Sistema funcionar, basta configurar o arquivo 
+configuracao.cgi
+
+Nele está localizado as principais tags do sistema, como a Senha
+Administrativa e a URL do sistema.
+
+De chmod no instalar.cgi de 755
+execute o instalar.cgi
+
+Crie a pasta usuarios e dê chmod nela de 777.
+
+Dê chmod de:
+
+755 em todos os arquivos CGI .
+777 nos arquivos TXT.
+777 nos arquivos RSE.
+
+Você pode adicionar as news via Script, SSI ou IFRAME.
+Caso você queira adicionar via SSI, abaixo segue o código:
+
+<!--#include virtual="news.cgi?todas"--> 
+
+
+Caso você tenha alguma Dúvida com relação ao script, entre em contato:
+
+ E-mail: renan@osimbr.net
+ ICQ: 89603614
+
+Obrigado por Utilizar nosso Sistema.
+
+#
+######################################################################
+
+
+#########################  Configuração  #############################
+#
+
+$senhaadmin="newsnan";
+#Coloque a senha administrativa
+
+$urlsistema="http://www.omoska.com/scripts/newsnan";
+#URL da pasta aonde fica as imagens
+
+$urlcgis="http://www.omoska.com/scripts/newsnan";
+#URL da pasta aonde fica os cgis
+
+$patch="/home/omoska/public_html/scripts/newsnan";
+#Patch da pasta aonde fica o script.inc e o postar.inc
+
+$urlsemwww="www.omoska.com/scripts/newsnan";
+#URL da pasta aonde se localiza o site SEM http://
+
+$versao="1.0";
+#NÃO MUDE! Versão de seu Atual Script
+
+#
+######################################################################

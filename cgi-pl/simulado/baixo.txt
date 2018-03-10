@@ -1,0 +1,8 @@
+<hr>
+E esta é a parte de baixo de seu layout.
+Note que este arquivo não tem abertura HTML, HEAD, BODY...
+<hr>
+Produzido por <a href="http://www.seu_dominio.com.br">seu nome</a><p>
+
+</body>
+</html>

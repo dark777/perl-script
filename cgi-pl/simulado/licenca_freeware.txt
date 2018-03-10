@@ -1,0 +1,39 @@
+ACORDO DE LICENÇA DE USO - TERMOS E CONDIÇÕES
+=============================================
+Cliente:
+Nº da licença: freeware-07-01
+=============================================
+
+DEFINIÇÃO DOS TERMOS 
+
+   1.O termo "software" designa o programa "OT1.0 - Orçamento de Pré-definidos" e documentação associada. 
+   2.O termo "autor" designa TodaviA Arte e Editoração Ltda, autor do programa. O autor pode ser contactado através do e-mail info@todavia.com.br. 
+
+CONDIÇÕES DE USO DO SOFTWARE
+
+O software é para uso pessoal ou profissional. Porém o autor reserva o direito autoral (copyright). Você não poderá distribuir o software, e sempre observar os termos e condições desta licença de uso.
+
+É proibida qualquer alteração no software, senão as solicitadas na documentação.
+O descumprimento desta norma acarretará em crimes de lucros-cessantes, reengenharia e plágio e não caracteríza o fato como co-autoria.
+Casos de reengenharia serão caraterizados como plágio direto.
+
+CONDIÇÕES PARA CÓPIA DO SOFTWARE 
+
+   1.Cópias do software não podem ser distribuídas na forma de CD-ROMs, disquetes ou qualquer outro meio eletrônico, gratuito ou não, sem autorização expressa do autor. 
+   2.Cópias do software não podem ser distribuídas como a parte de qualquer produto sem autorização expressa do autor. 
+   3.A autorização para a distribuição nas formas descritas nos ítens 1) e 2) acima, poderá ser obtida no forma de um "Acordo de Licença de Distribuição". Para informações sobre os termos e condições do "Acordo de Licença de Distribuição ", contate o autor através de e-mail. 
+	 4.O descumprimento destas normas acarretará processos criminais por perdas e danos, além de transgressões às normas de direito autoral e intelectual.
+
+RESPONSABILIDADE 
+
+A autor garante que todas as funções do software atenderão suas exigências, e que a sua operação será livre de erros. O risco refente ao desempenho e a qualidade do software são unicamente do usuário e não do autor. O autor não faz nenhuma garantia, implicita ou explícita com respeito ao software, documentação, qualidade, desempenho ou indicação para uma finalidade em particular. 
+
+Em nenhum caso o autor poderá ser responsabilizado por os danos, diretos ou indiretos; ou lucros cessantes em consequência de eventuais defeitos no software, inclusive se o autor tiver sido avisado da possibilidade de tais problemas, ou qualquer reivindicação de terceiros.
+
+Todas garantias restantes, expressas ou não, incluindo mas não limitado a aptidão para uma finalidade específica, são expressamente excluídas. 
+
+
+SUPORTE
+
+Não há, em nunehuma hipótese ou instância, suporte para este produto.
+

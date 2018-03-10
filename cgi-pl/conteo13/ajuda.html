@@ -1,0 +1,148 @@
+<html>
+<head topmargin="0" rightmargin="0" leftmargin="0" marginwidth="0" marginheight="0" >
+<title>Oceano Digital</title>
+<style><!--A:link:{text-decoration:none; color:#ffffff;}A:visited:{text-decoration:none; color:#ffffff;}A:hover:{text-decoration:none; color:#ffffff;}A:active:{text-decoration:underline; color:#ffffff;}}--></style>
+</head>
+<body bgcolor="#000000">
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" width="95%" bgcolor="#0000FF">
+    <tr>
+      <td width="100%" align="center"><b><a href="http://www.oceanodigital.com.br/ods"><font face="Verdana" color="#FFFFFF" size="2">Oceano
+        Digital Scripts</font></a></b></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <table border="0" cellpadding="0" cellspacing="0" width="95%" height="90%" bgcolor="#FFFFFF">
+    <tr>
+      <td width="10%" valign="top" bgcolor="#FF0000">&nbsp;</td>
+      <td width="80%" valign="top">
+        <div align="center">
+          <center>
+          <table border="0" cellspacing="0" width="95%" cellpadding="0">
+            <tr>
+              <td width="100%">
+                <p align="center"><b>
+                <font size="1" face="Verdana" color="#000000"><a href="http://www.oceanodigital.com.br"><br>
+                <br>
+                </a></font></b><font color="#FF0000" size="5" face="Arial">Conteo</font><font face="Verdana" size="4" color="#FF0000"><br>
+                </font><font face="Verdana" size="1" color="#000000">versão 1.3<br>
+                </font><font face="Verdana" size="1" color="#808080">22/10/2001</font>
+                <p align="center">&nbsp;</td>
+            </tr>
+          </table>
+          </center>
+        </div>
+        <div align="center">
+          <table border="0" cellspacing="0" width="95%" cellpadding="0">
+            <tr>
+              <td width="100%" valign="top">
+                <div align="center">
+                  <center>
+                  <table border="0" cellpadding="0" cellspacing="1" width="99%">
+                    <tr>
+                      <td width="50%"><font face="Verdana" size="2"><b>Neste arquivo
+                você terá os seguintes itens:<br>
+                </b>
+                Como configurar?<br>
+                        </font><font size="2" face="Verdana" color="#000000">Parte texto do Conteo<br>
+                Enviando para o servidor<br>
+                Como utilizar o Conteo?</font></td>
+                      <td width="50%">
+                        <p align="center"><font size="2" face="Verdana" color="#000000"><b>TiraDúvidas&nbsp;<br>
+                        </b>visite o canal #CGI da BRASNET</font></td>
+                    </tr>
+                  </table>
+                  </center>
+                </div>
+                <p align="left"><font size="2" face="Verdana" color="#000000">______________________</font><p align="left"><font face="Verdana" size="2"><b>Como configurar?<br>
+                </b>Para configurar edite as linhas do arquivo <font color="#000080">conteo.cgi</font>
+                indicadas abaixo:</font><p align="left"><font size="2" face="Verdana">&nbsp;&nbsp;&nbsp;&nbsp;
+                <b><font color="#000000">#!</font><font color="#000080">/usr/bin/perl</font></b><font color="#000080"><br>
+                </font>
+                Pergunte para seu provedor de hospedagem qual o path do PERL em seu
+                servidor. Essa é a primeira linha do script.</font><p align="left"><font size="2" face="Verdana">&nbsp;&nbsp;&nbsp;&nbsp;
+                </font><b><font color="#000000" size="2" face="Verdana">$pathsendmail =
+                '</font><font color="#000080" size="2" face="Verdana">/usr/sbin/sendmail</font><font color="#000000" size="2" face="Verdana">';
+                </font><font color="#996600" size="2" face="Verdana"><br>
+                </font></b><font size="2" face="Verdana" color="#000000">Modifique
+                o path do sendmail, programa de email do servidor.</font><p align="left"><b><font size="2" face="Verdana" color="#996600">&nbsp;&nbsp;&nbsp;&nbsp;
+                </font><font size="2" face="Verdana" color="#000000">$pronto =
+                &quot;</font><font size="2" face="Verdana" color="#000080">http://www.seusite.com.br/confirmado.html</font><font size="2" face="Verdana" color="#000000">&quot;;</font><font size="2" face="Verdana" color="#996600"><br>
+                </font></b><font size="2" face="Verdana" color="#000000">Edite
+                para o endereço do seu site e crie um arquivo chamado
+                confirmado.html que confirma que o amigo foi indicado. OBS:Crie
+                esse arquivo de confirmação.</font><b><font size="2" face="Verdana" color="#996600">&nbsp;&nbsp;&nbsp;&nbsp;</font></b><p align="left"><b><font size="2" face="Verdana" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;
+                @urls = ('</font><font size="2" face="Verdana" color="#000080">www.seusite.com.br</font><font size="2" face="Verdana" color="#000000">','</font><font size="2" face="Verdana" color="#000080">seusite.com.br</font><font size="2" face="Verdana" color="#000000">');<br>
+                </font></b><font size="2" face="Verdana" color="#000000">Edite
+                para o endereço do seu site.</font><p align="left"><b><font size="2" face="Verdana" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;
+                $paginaerro = &quot;</font><a href="http://www.seusite.com.b/erro.html"><font size="2" face="Verdana" color="#000080">http://www.seusite.com.b/erro.html</font></a><font size="2" face="Verdana" color="#000000">&quot;;<br>
+                </font></b><font size="2" face="Verdana" color="#000000">Edite
+                para o endereço do seu site e crie um arquivo chamado erro.html
+                que avisa que faltou dados a preencher no formulário ou foi
+                preenchido indevidamente.</font><p align="left">&nbsp;<p align="left"><font size="2" face="Verdana" color="#000000"><b>Parte
+                texto do Conteo<br>
+                </b>Edite as duas linhas abaixo:<b><br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; $Subject = &quot;</b></font><b><font size="2" face="Verdana" color="#000080">nomedosite</font><font size="2" face="Verdana" color="#000000">&quot;;<br>
+                </font></b><font size="2" face="Verdana" color="#000000">Troque
+                o termo &quot;nome do site&quot; pelo nome do seu site.</font><p align="left"><b><font size="2" face="Verdana" color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;
+                $site = &quot;</font><font size="2" face="Verdana" color="#000080">www.seusite.com.br</font><font size="2" face="Verdana" color="#000000">&quot;;<br>
+                </font>
+                </b><font size="2" face="Verdana" color="#000000">Edite para o link do seu site usando a mesma estrutura.</font><p align="left"><font size="2" face="Verdana" color="#000000"><b>&nbsp;&nbsp;&nbsp;&nbsp;
+                $mensagem&nbsp; </b>e&nbsp;<b> $mensagem2<br>
+                </b>Recomendamos não alterar essas linhas.</font><p align="left"><font size="2"><b><font face="Verdana" color="#000000">Enviando
+                para o servidor<br>
+                </font></b><font face="Verdana"><font color="#000000">Depois de
+                tudo configurado, você deve passar os arquivos para o servidor.
+                Vejamos então:<br>
+                » Transfira o arquivo </font><font face="Verdana" color="#000080">conteo.cgi
+                </font><font face="Verdana" color="#000000">para o seu
+                diretório /cgi-bin/&nbsp; e dê permissão 755 (chmod 755)<br>
+                » Transfira o arquivo que contém o formulário, para qualquer
+                diretório do seu site.</font></font></font><p align="left"><font size="2"><b><font face="Verdana" color="#000000">Como
+                utilizar o Conteo 1.3 ?<br>
+                </font>
+                </b><font face="Verdana"><font color="#000000">No arquivo form.html existe um formulário. Você deverá no
+                código fonte mudar a linha &quot;</font><font face="Verdana" color="#000080">http://www.seusite.com.br/cgi-bin/conteo.cgi&quot;
+                de acordo com seu site.</font></font></font><p align="left"><font size="2" face="Verdana" color="#000000">Depois
+                cole o formulário na página de seu site e pronto.&nbsp;<br>
+                OBS: para os que não sabem, o formulário está entre &lt;form&gt;
+                e &lt;/form&gt;</font><p align="left"><font size="2" face="Verdana" color="#000000">Boa
+                Sorte !!!</font>
+                <p align="left"><font size="2" face="Verdana" color="#000000">Novas
+                versões: <a href="http://www.oceanodigital.com.br/ods">www.oceanodigital.com.br/ods</a><br>
+                TiraDúvidas: visite o canal #CGI da BRASNET</font></p>
+                <p align="left"><font size="2" face="Verdana"><a href="http://www.oceanodigital.com.br"><font color="#000080">Oceano
+                Digital</font></a></font><!-- html --></td>
+            </tr>
+            <tr>
+              <td width="100%" valign="top">
+              &nbsp;
+              <p>&nbsp;
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td width="10%" valign="top" bgcolor="#FF0000">
+        <p align="left">&nbsp;</td>
+    </tr>
+  </table>
+</div>
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" width="95%" bgcolor="#0000FF">
+    <tr>
+      <td width="100%" align="center"><b><a href="http://www.oceanodigital.com.br/ods"><font face="Verdana" color="#FFFFFF" size="2">Oceano
+        Digital Scripts</font></a></b></td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</body>
+
+</html>

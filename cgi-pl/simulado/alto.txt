@@ -1,0 +1,11 @@
+<html>
+<head>
+	<title>CGI-Center TodaviA</title>
+</head>
+<body>
+Este é o cabeçalho (ou cabeçarium?...Não importa) de sua página de resultado.<p>
+
+Sinta-se à vontade para "detonar" no layout.
+
+(note que este arquivo não tem fechamento /body ou /html)
+<hr>
