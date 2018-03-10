@@ -1,0 +1,20 @@
+<HTML>
+<FORM ACTION="/cgi-bin/cc_ver.cgi" METHOD=POST>
+<B>Would you like to pay by Credit Card?</B><BR>
+<INPUT TYPE=RADIO NAME="payby" VALUE="yes"> <B>Yes</B><BR>
+<INPUT TYPE=RADIO NAME="payby" VALUE="no"> <B>No</B><BR>
+<P><B>**</B> If you answered &quot;Yes&quot;, please fill in the following...
+<P>
+<B>CC Type:</B><BR>
+<INPUT TYPE=RADIO NAME="cardtype" VALUE="visa"> <B>Visa</B><BR>
+<INPUT TYPE=RADIO NAME="cardtype" VALUE="mastercard"> <B>MasterCard</B><BR>
+<INPUT TYPE=RADIO NAME="cardtype" VALUE="amex"> <B>American Express</B><BR>
+<INPUT TYPE=RADIO NAME="cardtype" VALUE="novus"> <B>Novus (Discover)</B>
+<P>
+<INPUT TYPE=TEXT NAME="cardholder" SIZE=30> <B>Cardholder's Name</B><BR>
+<INPUT TYPE=TEXT NAME="cardnumber" SIZE=20> <B>Card Number</B><BR>
+<INPUT TYPE=TEXT NAME="cardexp" SIZE=5> <B>Card Expiration Date</B>
+<P>
+<INPUT TYPE=SUBMIT VALUE="Check"> <INPUT TYPE=RESET VALUE="Clear/Reset">
+</FORM>
+</HTML>
