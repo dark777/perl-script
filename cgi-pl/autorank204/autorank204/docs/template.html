@@ -1,0 +1,256 @@
+<html>
+<head>
+	<title>AutoRank Pro Version 2.0.4 - How To Use The HTML Template</title>
+</head>
+
+<body>
+<font face="Verdana" size="2">
+<center><h1>CGI Works Installation File</h1>
+<font size="1">
+[ <a href="#what">What Is The Template?</a> ] &nbsp;&nbsp;
+[ <a href="#design">Designing Your Layout</a> ] &nbsp;&nbsp;
+[ <a href="#replace">Replacing Your HTML</a> ] &nbsp;&nbsp;
+[ <a href="#finishing">Finishing It All Up</a> ] &nbsp;&nbsp;
+[ <a href="#tips">Tips For Success</a> ]</font></center>
+<hr width="95%" size="1" noshade>
+  <h2>AutoRank Pro Version 2.0.4 - How To Use The HTML Template</h2>
+  
+  <ul>
+  <li> <b><a name="what">What Is This Template Feature?</a></b>
+  <p>
+  The template feature will allow you to have your list look <b>EXACTLY</b><br>
+  how you want it to.  All you have to do is make up a sample list, replace some<br>
+  of the HTML with script values, and it will look just like you had it laid out<br>
+  in your HTML editor.
+  
+  <p>
+  
+  The only downfall of this template is that it is somewhat complicated.  You need<br>
+  to read this file thoroughly and make sure you understand it all before you attempt<br>
+  to edit the template.  If you have any doubts about it, please use the normal list layout<br>
+  as it is much easier to set up.
+  
+  <p>
+  
+  As far as we know, this is the only "Top Sites" script to implement this feature.<br>
+  It may take some getting used to, but once you've got it down it can be an extremely<br>
+  powerful tool to integrate the list into your web site.
+  
+  <p>
+
+  <li> <b><a name="design">Designing Your Layout</a></b>
+  <p>
+  The first thing you should do is, in an HTML editor, create a list<br>
+  with one or two entries exactly how you want it to appear.  Go ahead<br>
+  and place some banners in (if you are using them), because the number of <br>
+  banners to show is still controlled by the script variable.<p>
+
+  So, if you want the list to look like this:<p>
+  <font size="-2">
+  1. <a href="http://www.site1.com">Site 1 Title</a> <font color="Teal">|hits in| |hits out|</font> - Description of site 1<br>
+  2. <a href="http://www.site2.com">Site 2 Title</a> <font color="Teal">|hits in| |hits out|</font> - Description of site 2<br>
+  </font>
+  
+  <p>
+  
+  Then you would use the following HTML:<p>
+  <font size="-2">
+  &lt;font size=&quot;-2&quot;&gt;<br>
+  1. &lt;a href=&quot;http://www.site1.com&quot;&gt;Site 1 Title&lt;/a&gt; &lt;font color=&quot;Teal&quot;&gt;|hits in| |hits out|&lt;/font&gt; - Description of site 1&lt;br&gt;<br>
+  2. &lt;a href=&quot;http://www.site2.com&quot;&gt;Site 2 Title&lt;/a&gt; &lt;font color=&quot;Teal&quot;&gt;|hits in| |hits out|&lt;/font&gt; - Description of site 2&lt;br&gt;<br>
+  &lt;/font&gt;
+  </font>
+
+<hr width="100%" size="1" noshade>
+  
+  <li> <b><a name="replace">Replacing Your HTML With Template Values</a></b>
+  <p>
+  Now that you've got your layout, you need to replace some of the HTML<br>
+  you created with values that the script can understand.<p>
+  
+  Here are the values the script understands and what they mean:
+  <p>
+<table border cellspacing=0 cellpadding=7 bgcolor="#ffffff">
+<tr bgcolor="#DCDCDC">
+	<td align="center"><b>SCRIPT VALUE</b></td>
+	<td align="center"><b>WHAT IT IS</b></td>
+</tr>
+<tr>
+	<td><font face="Arial" size="-1">#%RANK%#</td>
+	<td>The site's current rank</td>
+</tr>
+<tr>
+	<td><font face="Arial" size="-1">#%FONT_SIZE%#</td>
+	<td>The font size to use, from setup.cgi<br>Must be located in a font tag!</td>
+</tr>
+<tr>
+	<td><font face="Arial" size="-1">#%BANNER%#</td>
+	<td>The site's banner, linked to the site's URL</td>
+</tr>
+<tr>
+	<td><font face="Arial" size="-1">#%TITLE%#</td>
+	<td>The site's title, linked to the site's URL</td>
+</tr>
+<tr>
+	<td><font face="Arial" size="-1">#%IN%#</td>
+	<td>The number of hits sent BY the site</td>
+</tr>
+<tr>
+	<td><font face="Arial" size="-1">#%OUT%#</td>
+	<td>The number of hits sent TO the site</td>
+</tr>
+<tr>
+	<td><font face="Arial" size="-1">#%DESCRIPTION%#</td>
+	<td>The description of the site</td>
+</tr>
+</table>
+<p>
+<ul>
+<b>NOTES:</b><p>
+The <b>#%BANNER%#</b> value <b>ALWAYS</b> has a <b>&lt;br&gt;</b> tag immediatly after it.<br>
+This is set by the script and cannot be changed through the template.<br>
+So, if you had a <b>&lt;br&gt;</b> tag after the banner in your HTML layout<br>
+it can be removed because it is automatically placed there by the script.
+
+<p>
+
+The <b>#%BANNER%#</b> value is <b>ALWAYS</b> linked to the site's URL.  This is set by<br>
+the script and cannot be changed through the template.
+
+<p>
+
+The <b>#%TITLE%#</b> value is <b>ALWAYS</b> linked to the site's URL.  This is set by<br>
+the script and cannot be changed through the template.
+</ul>
+
+<p>
+
+Now that all the values have been explained, lets see how to stick them into your HTML.
+
+<p>
+
+Lets start off with the rank value, using the sample HTML list we created above.
+
+<p>
+Here's how it looked above:<p>
+<font size="-2">
+1. &lt;a href=&quot;http://www.site1.com&quot;&gt;Site 1 Title&lt;/a&gt; &lt;font color=&quot;Teal&quot;&gt;|hits in| |hits out|&lt;/font&gt; - Description of site 1&lt;br&gt;<br>
+</font>
+<p>
+And here's how it looks when we replace the numbered rank with the script value:<p>
+<font size="-2">
+#%RANK%#. &lt;a href=&quot;http://www.site1.com&quot;&gt;Site 1 Title&lt;/a&gt; &lt;font color=&quot;Teal&quot;&gt;|hits in| |hits out|&lt;/font&gt; - Description of site 1&lt;br&gt;<br>
+</font>
+
+<p>
+
+Now we'll stick in the Site's Title, which is automatically linked to the site's URL.
+<p>
+<font size="-2">
+#%RANK%#. #%TITLE%# &lt;font color=&quot;Teal&quot;&gt;|hits in| |hits out|&lt;/font&gt; - Description of site 1&lt;br&gt;<br>
+</font>
+<p>
+That's all there is to it.  Just look through your HTML, find the script value that<br>
+matches the HTML, and replace it.  Now you just have to go through the remaining HTML<br>
+and do the replacements.
+
+<p>
+
+Here's what the HTML will look like when it's finished:<p>
+<font size="-2">
+#%RANK%#. #%TITLE%# &lt;font color=&quot;Teal&quot;&gt;|#%IN%#| |#%OUT%#|&lt;/font&gt; - #%DESCRIPTION%#&lt;br&gt;<br>
+</font>
+
+<p>
+
+<b>REMEMBER</b> that the <b>#%TITLE%#</b> value also contains the site's url, so<br>
+the site's Title and URL are replaced with one script value.
+
+<p>
+
+<b>REMEMBER</b> that the <b>#%BANNER%#</b> value also contains the site's url, so<br>
+the site's Banner and URL are replaced with one script value.
+
+<p>
+
+<b>REMEMBER</b> that the <b>#%BANNER%#</b> value also contains a <b>&lt;br&gt;</b><br>
+immediatly following the closing <b>&lt;/a&gt;</b> tag for the banner's link.
+
+<p>
+
+Now, what if you don't want to show the out hits, or the rank.  Simple, just remove<br>
+the #%RANK%# and #%OUT%# and they're gone.  So, if you don't want to show something<br>
+just remove it's script value from the template and it will not appear.
+
+<hr width="100%" size="1" noshade>
+
+<li> <b><a name="finishing">Finishing It All Up</a></b>
+<p>
+To finish everything up, copy the HTML you created and paste it into the "NEW TEMPLATE HTML"<br>
+field in the form.  Click the button in the table and that will set your current template.<br>
+
+<p>
+
+Now reload the main admin page, and choose to Re-Rank the list.  You need to have<br>
+a few members, or test members in order to check your layout.  Then you can visit<br>
+your html page to see what it looks like.  Hopefully you've got it just how<br>
+you wanted it, but if not just keep playing with it until you do.
+
+<p>
+
+Please remember that the template option can be easily turned off, so if you're having<br>
+too much trouble with it please use the normal table layout.
+
+  
+<hr width="100%" size="1" noshade>
+
+<li> <b><a name="tips">Tips For Success</a></b>
+<p>
+Here are a few quick tips to help you with your HTML Layout.
+
+<p>
+
+<b>Using tables with the template feature</b><p>
+When you're using tables with the template feature, there are a few things<br>
+that you need to consider when setting your header/footer files, advertisements,<br>
+and your HTML template.
+
+<p>
+
+First of all, each ranked site is most likely going to take one table row, or <b>&lt;tr&gt;</b><br>
+HTML tag.  So, in order for this to work you will need to have the opening <b>&lt;table&gt;</b><br>
+tag in the header file, and the closing <b>&lt;/table&gt;</b> tag in the footer file.  You <br>
+will need to have your HTML template begin with a <b>&lt;tr&gt;</b> and end with a <b>&lt;/tr&gt;</b>.
+
+<p>
+
+Next, if you have any advertisements, you will either have to make it a table row with<br>
+a colspan set to the required number, or close the table and start a new table after the<br>
+advertisement.  Either one will work.  Remember though that if you are not using the<br>
+template feature then the script handles all the table properties.
+
+<p>
+
+<b>Test your layout!!</b>
+
+<p>
+
+Before you begin promoting your top list, add a few test members, send a few hits through<br>
+and then use the Re-Rank function in the admin script to create the page.  You can then<br>
+point your browser to the top list page to make sure it looks ok.
+
+<br>
+</ul>
+
+<center>
+
+<hr width="75%" size="1" noshade>
+
+<small>
+
+Copyright &copy; 1999 <a href="http://www.cgi-works.net">CGI Works</a><br>
+<i>AutoRank Pro v2.0.4 template.html</i>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

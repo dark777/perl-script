@@ -1,0 +1,79 @@
+  <html>
+  <head>
+    <title>Edit Account Data</title>
+  <body bgcolor="white" link="blue">
+  <div align="center">
+<form method="POST">  <table cellpadding="1" cellspacing="0" border="0" align="center" width="600">
+  <tr>
+  <td bgcolor="#000000">
+  <!-- INNER TABLE --> 
+  <table cellpadding="5" cellspacing="1" border="0" width="100%">
+  <tr>
+  <td bgcolor="#afafaf" align="center" colspan="2">
+  <font face="Verdana,Arial" size="4">
+  <b>Edit Account: #%USERNAME%#</b>
+  </font>
+  </td>
+  </tr>
+  <tr bgcolor="#dcdcdc">
+  <td align="right">
+  <font face="Verdana, Arial" size="2"><b>
+  E-Mail Address</b>
+  </td>
+  <td bgcolor="white">
+  #%EMAIL_FIELD%#
+  </td>
+  </tr>  
+  <tr bgcolor="#dcdcdc">
+  <td align="right">
+  <font face="Verdana, Arial" size="2"><b>
+  Site Title</b>
+  </td>
+  <td bgcolor="white">
+  #%SITE_TITLE_FIELD%#
+  </td>
+  </tr>
+  <tr bgcolor="#dcdcdc">
+  <td align="right">
+  <font face="Verdana, Arial" size="2"><b>
+  Site URL</b>
+  </td>
+  <td bgcolor="white">
+  #%SITE_URL_FIELD%#
+  </td>
+  </tr>
+  <tr bgcolor="#dcdcdc">
+  <td align="right">
+  <font face="Verdana, Arial" size="2"><b>
+  Banner URL</b>
+  </td>
+  <td bgcolor="white">
+  #%BANNER_URL_FIELD%# 
+  </td>
+  <tr bgcolor="#dcdcdc">
+  <td align="right">
+  <font face="Verdana, Arial" size="2"><b>
+  Description</b>
+  </td>
+  <td bgcolor="white">
+  #%DESCRIPTION_FIELD%#  
+  </td>
+  </tr>
+  <tr bgcolor="#dcdcdc">
+  <td align="right">
+  <font face="Verdana, Arial" size="2"><b>
+  New Password</b>
+  </td>
+  <td bgcolor="white">
+  #%NEW_PASSWORD_FIELD%#
+  <font face="Verdana,Arial" size="1">(Leave blank to retain old password)</font>
+  </td>
+  </tr>
+  <tr>
+  <td colspan="2" align="center" bgcolor="white">
+  <font face="Verdana,Arial" size="2"><b>Current Password:</b></font>
+  #%CUR_PASSWORD_FIELD%#&nbsp;&nbsp;&nbsp;&nbsp;
+  #%SUBMIT_BUTTON%#
+  </td></tr>
+  </table>
+  </td></tr></table><p>

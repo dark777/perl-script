@@ -1,0 +1,49 @@
+  <div align="center">
+  <form method="POST">
+  <table cellpadding="1" cellspacing="0" border="0" align="center" width="420">
+  <tr>
+  <td bgcolor="#000000">
+  <!-- INNER TABLE --> 
+  <table cellpadding="5" cellspacing="1" border="0" width="100%">
+  <tr>
+  <td bgcolor="#afafaf" align="center" colspan="2">
+  <font face="Arial" size="3">
+  <b>AUTORANK PRO ADMINISTRATIVE INTERFACE</b></font>
+  </td>
+  </tr>
+  
+  <tr>
+  <td bgcolor="#ffffff" width="15">
+  <input type="Radio" name="selection" value="execute_function">
+  </td>
+  <td bgcolor="#dcdcdc" width="305">
+  <select name="function">
+    <option value="Re-rank The List">Re-rank The List</option>
+    <option value="Review New Signups">Review New Signups</option>
+    <option value="Display All Members">Display All Members</option>
+    <option value="Edit List Breaks">Edit List Breaks</option>
+    <option value="Edit Your Setup">Edit Your Setup</option>
+    <option value="Change Admin Password">Change Admin Password</option>
+    <option value="Send E-Mail To Members">Send E-Mail To Members</option>
+    <option value="Ban A Site">Ban A Site</option>
+    <option value="Display Error Log">Display Error Log</option>
+  </select>
+  </td>
+  </tr>
+  
+  <tr>
+  <td bgcolor="#ffffff" width="15">
+  <input type="Radio" name="selection" value="edit_files">
+  </td>
+  <td bgcolor="#dcdcdc" width="305">
+  <font face="Arial" size="2">
+  <b>Edit</b></font>&nbsp;
+  <select name="file">
+    <option value="Header/Footer">Header/Footer</option>
+    <option value="HTML Template">HTML Template</option>
+    <option value="Table Properties">Table Properties</option>
+  </select>&nbsp;
+  <font face="Arial" size="2"><b>For</b></font>&nbsp;
+  <select name="page">
+
+

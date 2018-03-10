@@ -1,0 +1,229 @@
+package SCRIPT_ERRORS;
+
+$SCRIPT_ERRORS::CODE{'1000'} = <<ERROR_1000;
+Could not load the data file for one of the list pages.<br>
+If you are the list administrator, make sure you have setup
+each of your list pages via the administrative script.
+ERROR_1000
+
+$SCRIPT_ERRORS::CODE{'1001'} = <<ERROR_1001;
+Could not open one of your list pages for writing.<br>
+If you are the list administrator, make sure
+each of your list pages exists and is writable.
+ERROR_1001
+
+$SCRIPT_ERRORS::CODE{'1002'} = <<ERROR_1002;
+Could not open, create, or write to the administrative password file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1002
+
+$SCRIPT_ERRORS::CODE{'1003'} = <<ERROR_1003;
+Could not open the member data directory: $VARIABLES::MEMBER_DATA_DIR.<br>
+If you are the list administrator verify that this directory exists
+and is readable by the script.
+ERROR_1003
+
+$SCRIPT_ERRORS::CODE{'1004'} = <<ERROR_1004;
+Could not open a member data file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1004
+
+$SCRIPT_ERRORS::CODE{'1005'} = <<ERROR_1005;
+Could not send an e-mail with the sendmail program.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1005
+
+$SCRIPT_ERRORS::CODE{'1006'} = <<ERROR_1006;
+Could not open the administrative data file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1006
+
+$SCRIPT_ERRORS::CODE{'1007'} = <<ERROR_1007;
+Could not open, create, or write to the signup page data file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1007
+
+$SCRIPT_ERRORS::CODE{'1008'} = <<ERROR_1008;
+Could not create a member data file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1008
+
+$SCRIPT_ERRORS::CODE{'1009'} = <<ERROR_1009;
+Could not change permissions on a file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1009
+
+$SCRIPT_ERRORS::CODE{'1010'} = <<ERROR_1010;
+Could remove one of the member data files.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1010
+
+$SCRIPT_ERRORS::CODE{'1011'} = <<ERROR_1011;
+Could open the header data file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1011
+
+$SCRIPT_ERRORS::CODE{'1012'} = <<ERROR_1012;
+Could open the footer data file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1012
+
+$SCRIPT_ERRORS::CODE{'1013'} = <<ERROR_1013;
+Could not open the error log file.<br>
+It is possible that there have been no errors, and therefore no log exists.<br>
+If you know that there have been errors, and still get this message, double check your setup
+ERROR_1013
+
+$SCRIPT_ERRORS::CODE{'1014'} = <<ERROR_1014;
+Could not open the list break data file.<br>
+You need to create this file by entering data, and selecting this list break.
+ERROR_1014
+
+$SCRIPT_ERRORS::CODE{'1015'} = <<ERROR_1015;
+Could not open the banned sites list.<br>
+You need to create this file by entering data, and selecting this list break.
+ERROR_1015
+
+$SCRIPT_ERRORS::CODE{'1016'} = <<ERROR_1016;
+Could not open, create, or write to the variables data file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1016
+
+$SCRIPT_ERRORS::CODE{'1017'} = <<ERROR_1017;
+Could not locate the errors.dat file, which is required for script operation.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1017
+
+$SCRIPT_ERRORS::CODE{'1018'} = <<ERROR_1018;
+Could not locate the admin.dat file, which is required for script operation.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1018
+
+$SCRIPT_ERRORS::CODE{'1019'} = <<ERROR_1019;
+Could not open, write to, or create the time data file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1019
+
+$SCRIPT_ERRORS::CODE{'1020'} = <<ERROR_1020;
+Could not locate a template data file.<br>
+If you are the list administrator verify that your script is setup correctly.
+ERROR_1020
+
+package DATA_ERRORS;
+
+$DATA_ERRORS::CODE{'1000'} = <<ERROR_1000;
+You entered an invalid administrative password.<br>
+Use your browsers back button and try again.
+ERROR_1000
+
+$DATA_ERRORS::CODE{'1001'} = <<ERROR_1001;
+You left one or more required fields blank.<br>
+Use your browsers back button and try again.
+ERROR_1001
+
+$DATA_ERRORS::CODE{'1002'} = <<ERROR_1002;
+One of the data supplied is malformed.<br>
+Use your browsers back button and try again.
+ERROR_1002
+
+$DATA_ERRORS::CODE{'1003'} = <<ERROR_1003;
+The passwords you entered do not match.<br>
+Use your browsers back button and try again.
+ERROR_1003
+
+$DATA_ERRORS::CODE{'1004'} = <<ERROR_1004;
+The username you entered is already taken.<br>
+Use your browsers back button and try again.
+ERROR_1004
+
+$DATA_ERRORS::CODE{'1005'} = <<ERROR_1005;
+You didn't select a member to view details about.<br>
+Use your browsers back button and try again.
+ERROR_1005
+
+$DATA_ERRORS::CODE{'1006'} = <<ERROR_1006;
+You must enter a keyword to search for.<br>
+Use your browsers back button and try again.
+ERROR_1006
+
+$DATA_ERRORS::CODE{'1007'} = <<ERROR_1007;
+The username you entered was not found.<br>
+Use your browsers back button and try again.
+ERROR_1007
+
+$DATA_ERRORS::CODE{'1008'} = <<ERROR_1008;
+You are not setup to use the HTML template.<br>
+Use your browsers back button and try again.
+ERROR_1008
+
+$DATA_ERRORS::CODE{'1009'} = <<ERROR_1009;
+You are setup to use the HTML template.<br>
+Use your browsers back button and try again.
+ERROR_1009
+
+$DATA_ERRORS::CODE{'1010'} = <<ERROR_1010;
+Somehow an invalid command was selected.<br>
+Use your browsers back button and try again.
+ERROR_1010
+
+$DATA_ERRORS::CODE{'1011'} = <<ERROR_1011;
+You must select a member for this action.<br>
+Use your browsers back button and try again.
+ERROR_1011
+
+$DATA_ERRORS::CODE{'1012'} = <<ERROR_1012;
+You must select a command to execute.<br>
+Use your browsers back button and try again.
+ERROR_1012
+
+$DATA_ERRORS::CODE{'1013'} = <<ERROR_1013;
+You must enter a URL to ban or unban.<br>
+Use your browsers back button and try again.
+ERROR_1013
+
+$DATA_ERRORS::CODE{'1014'} = <<ERROR_1014;
+The URL you entered has been banned from signing up.<br>
+Contact the administrator of this list for details.
+ERROR_1014
+
+$DATA_ERRORS::CODE{'1015'} = <<ERROR_1015;
+You must enter one LESS list split location than pages to write the lists to.<br>
+Use your browsers back button and try again.
+ERROR_1015
+
+$DATA_ERRORS::CODE{'1016'} = <<ERROR_1016;
+The "Main List Page" must match the first page in the "Page List" field.<br>
+Use your browsers back button and try again.
+ERROR_1016
+
+$DATA_ERRORS::CODE{'1017'} = <<ERROR_1017;
+The password entered does not match the password on file.<br>
+Use your browsers back button and try again.
+ERROR_1017
+
+$DATA_ERRORS::CODE{'1018'} = <<ERROR_1018;
+You entered too many characters for the "Site Title" field.<br>
+Use your browsers back button and try again.
+ERROR_1018
+
+$DATA_ERRORS::CODE{'1019'} = <<ERROR_1019;
+You entered too many characters for the "Site Description" field.<br>
+Use your browsers back button and try again.
+ERROR_1019
+
+$DATA_ERRORS::CODE{'1020'} = <<ERROR_1020;
+Username entered is invalid.  No spaces are allowed.<br>
+Use your browsers back button and try again.
+ERROR_1020
+
+$DATA_ERRORS::CODE{'1021'} = <<ERROR_1021;
+Invalid "Total Sites To List" value.  This number must be
+larger than the last number in your "Split List At" list of values.<br>
+Use your browsers back button and try again.
+ERROR_1021
+
+$DATA_ERRORS::CODE{'1022'} = <<ERROR_1022;
+Invalid "Font Sizes" value.  Make sure you're entering valid data.<br>
+Use your browsers back button and try again.
+ERROR_1022
+1;

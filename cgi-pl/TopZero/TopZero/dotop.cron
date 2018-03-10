@@ -1,0 +1,26 @@
+# THE FOLLOWING IS FOR THE TOP100 CGI
+
+# THIS FILE CREATES THE AUTOMATIC UPDATING CRON JOBS
+# REQUIRED FOR THE TOP100CGI TO AUTOMATICALLY RUN
+# TO USE, EDIT THIS FILE SO THAT YOUR PATHS ARE
+# CORRECT AND ADD TO YOUR CRONTAB SETUP.
+# STEPS:
+# 1. VIA TELNET, CD TO YOUR CGI-BIN DIRECTORY AND TYPE "pwd"
+# 2. YOU WILL GET A PATH LIKE /home/httpd/cgi-bin
+# 3. MAKE SURE THE BELOW PATHS MATCH THE PATH YOU SEE
+# 4. IN TELNET (INSIDE THE CGI-BIN DIRECTORY) TYPE "crontab dotop.cron"
+# 5. YOUR LIST IS NOW AUTOMATICALLY SET TO UPDATE
+
+0,30 * * * * sh /home/virtual/www/warezplaza/cgi-bin/topall.sh
+2 0 * * * /usr/bin/perl /home/virtual/www/warezplaza/cgi-bin/topzero.cgi
+
+# USE CAUTION WHEN MODIFYING THE BELOW!!!
+# YOU MAY DELETE YOUR ENTIRE SITE IF USED WRONG!
+0,30 * * * * cd /home/virtual/www/warezplaza/data/locksip; rm -f *
+5,35 * * * * cd /home/virtual/www/warezplaza/data/lockvip; rm -f *
+
+# Un-comment the following to enable reminders.
+#0 22 * * * /usr/bin/perl /home/virtual/www/warezplaza/cgi-bin/topreminder.cgi
+
+
+

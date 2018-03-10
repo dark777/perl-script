@@ -1,0 +1,139 @@
+Sistema de Upload com admin e seção membros. Ótimo CGI!
+https://www.scriptbrasil.com.br/script/cgi/upload.zip
+################################################################################
+# eUpload                                      Version 1.0                     #
+# Copyright 2000 Frederic TYNDIUK (FTLS)       All Rights Reserved.            #
+# E-Mail: tyndiuk@ftls.org                     Script License: GPL             #
+# Created  01/01/2000                          Last Modified 01/01/2000        #
+# Scripts Archive at:                          http://www.ftls.org/cgi/        #
+################################################################################
+
+
+1. What is it ?
+===============
+
+	This script allows for people using browsers that are RFC1867 compliant to
+upload files directly through their web browser to your server.
+Administrators can configure for each users where file will be uploaded.
+This script is ideal for administrator's who want to allow users to upload files, but
+don't want add a FTP account.
+
+
+2. System Requirements:
+=======================
+
+	- Perl 5.0 or newer; you can get it at http://www.perl.com/
+	- A web server, you must have access to add / execute CGI scripts.
+
+
+3. What this archive contains ?
+===============================
+
+	This archive comes with 6 differents files:
+	    1) COPYING:       Copyright informations (GPL).
+	    2) README:        This file.
+	    3) LISEZMOI:      French doc...
+	    4) upload.cgi:    upload script.
+	    5) upload.html:   HTML Upload form.
+	    6) password.txt:  Password file.
+
+
+4. Installation and Configuration:
+==================================
+
+	It's a Perl script, so installation is pretty easy. You don't need to
+compile anything. 
+
+	Copy *.cgi in your /cgi-bin/ directory.
+	Copy *.txt in your data directory.
+	Copy *.html in your web site.
+	Make it executable, unix only (chmod a+rx *.cgi)
+	Make writable data file, unix only (chmod a+rw *.txt)
+
+	You will have to do some configuration:
+
+	Edit CGI Scripts (*.cgi) and change #/usr/bin/perl, if it's
+necessary...
+
+	Edit upload.cgi and change  "Necessary Variables Section"
+
+	my $DATA_DIR = '/Absolute/path/to/datadir/';
+		# Path of data directory
+	my $DEFAULT_UPLOAD_DIR = '/tmp/';
+		# Default upload dir, used only if you don't use password protect.
+
+	my $MAX_SIZE_UPLOAD = 25; # Ko
+		# File sizes are limited to $MAX_SIZE_UPLOAD (0 No Limit), larger files
+		# will return an 'Internal Server Error'.
+
+	my $FORM_URL = 'http://www.yourdomain.com/upload.html';
+		# URL of Upload form.
+
+	my $WEBMASTER_EMAIL = 'you@yourdomain.com';
+		# Webmaster  E-Mail.
+	
+	my $DISPLAY_LANG = 'En';
+		# Fr, if you prefer french text.
+	
+	my $USE_PASSWORD_PROTECT = 1;
+		# 1 to use password protect 0 else.
+	my $PASSWORD_FILE = $DATA_DIR.'password.txt'; 
+		# Name of Password file.
+
+
+	Edit 'upload.html' and change look, but don't remove HIDDEN input and don't
+	change 'input' form name.
+
+
+5. How to run it ?
+==================
+
+	Use uploader:
+		Goto 'form URL' or '/cgi-bin/upload.cgi' and try it..
+		Default login 'member', password 'member' upload dir '/tmp/'.
+
+	Use Administrative display:
+		Goto '/cgi-bin/upload.cgi?ac=admin'
+		Default login 'admin', password 'admin'.
+		You can add, edit, or delete 'upload account'. for each users, you should
+	give login, password, level (administrator / guest), upload dir.
+
+
+6. Version history:
+===================
+
+	Version 1.0			01/01/2000  - Script Created.
+
+
+7. Copyright:
+=============
+
+	This software is copyright (C) 1999 Frederic TYNDIUK. It is distributed
+under the terms of the GNU General Public License (GPL). Because it is licensed
+free of charge, there is NO WARRANTY, it is provided AS IS. The author can not
+be held liable for any damage that might arise from the use of this software.
+Use it at your own risk. 
+	See the file COPYING for more details (or http://www.gnu.org/).
+
+
+8. Updates ?
+============
+
+	Latest version and New Scripts can be found at:
+	
+			http://www.ftls.org/en/
+
+
+9. Contact:
+===========
+
+	Please feel free to contact me with any comments, suggestions, bug fixes
+criticism, or just a happiness messages.
+
+	If you run into any problems while trying to configure these scripts
+first read this file carefully, if you don't find any solution, send me a Mail.
+
+	E-Mail: tyndiuk@ftls.org
+	Web: http://www.ftls.org/
+
+                                                  Frederic TYNDIUK

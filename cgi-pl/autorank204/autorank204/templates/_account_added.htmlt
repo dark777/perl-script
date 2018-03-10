@@ -1,0 +1,78 @@
+  <html>
+  <head>
+    <title>New Member Successfully Added</title>
+  <body bgcolor="white" link="blue">
+  <div align="center">
+  <table cellpadding="1" cellspacing="0" border="0" align="center" width="600">
+  <tr>
+  <td bgcolor="#000000">
+  <!-- INNER TABLE --> 
+  <table cellpadding="5" cellspacing="1" border="0" width="100%">
+  <tr>
+  <td bgcolor="#afafaf" align="center" colspan="2">
+  <font face="Verdana,Arial" size="4">
+  <b>Successful Addition Of Member #%USERNAME%#</b>
+  </font>
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="#dcdcdc" width="150">
+  <font face="Verdana,Arial" size="2"><b>Username
+  </td>
+  <td bgcolor="#ffffff" width="450">
+  <font face="Verdana,Arial" size="2">#%USERNAME%#
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="#dcdcdc" width="150">
+  <font face="Verdana,Arial" size="2"><b>Password
+  </td>
+  <td bgcolor="#ffffff" width="450">
+  <font face="Verdana,Arial" size="2">#%PASSWORD%#
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="#dcdcdc" width="150">
+  <font face="Verdana,Arial" size="2"><b>E-Mail Address
+  </td>
+  <td bgcolor="#ffffff" width="450">
+  <font face="Verdana,Arial" size="2">#%EMAIL%#
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="#dcdcdc" width="150">
+  <font face="Verdana,Arial" size="2"><b>Site Title
+  </td>
+  <td bgcolor="#ffffff" width="450">
+  <font face="Verdana,Arial" size="2">#%SITE_TITLE%#
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="#dcdcdc" width="150">
+  <font face="Verdana,Arial" size="2"><b>Description
+  </td>
+  <td bgcolor="#ffffff" width="450">
+  <font face="Verdana,Arial" size="2">#%DESCRIPTION%#
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="#dcdcdc" width="150">
+  <font face="Verdana,Arial" size="2"><b>Site URL
+  </td>
+  <td bgcolor="#ffffff" width="450">
+  <font face="Verdana,Arial" size="2">#%SITE_URL%#
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="#dcdcdc" width="150">
+  <font face="Verdana,Arial" size="2"><b>Banner URL
+  </td>
+  <td bgcolor="#ffffff" width="450">
+  <font face="Verdana,Arial" size="2">#%BANNER_URL%#
+  </td>
+  </tr>
+  </table>
+  </td></tr></table><p>
+    <font face="Verdana,Arial" size="2">
+    Your data has been successfully recorded.  You can now place a link on your site<br>
+    that points to <font color="red">#%LINK_TO_URL%#</font>.

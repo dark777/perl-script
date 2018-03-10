@@ -1,0 +1,87 @@
+<html>
+<head>
+  <title>AutoRank Pro v2.0.0 Upgrade Installation Instructions</title>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="purple">
+<div align="center">
+<font face="Verdana">
+<h2>AutoRank Pro v1.3.0 to v2.0.x Upgrade Instructions</h2>
+<font size="2">
+Follow these instructions to upgrade your version 1.3.0 installation to version 2.0.x<br>
+Instructions for the v2.0.x to v2.0.4 upgrade are <a href="#update">here</a>
+<p>
+</div>
+<table width="600">
+<tr>
+<td>
+<font face="Verdana">
+<font size="2">
+<ol>
+<b><li></b> Extract all files from the AutoRank Pro v2.0.x archive you downloaded.<p>
+<b><li></b> In each .cgi file, you will need to set the location of Perl 5 on your
+server.<br>  This is done on the first line of the file, usually looking something
+like:<p>
+<font face="Courier">#!/usr/bin/perl</font>
+<p>
+Where /usr/bin/perl is the location of Perl 5.<p>
+<b><li></b> Now, upload <b>ONLY</b> the update.cgi file, in ASCII mode, to the directory
+where your current AutoRank Pro .cgi files are located.  Set the permissions on this file to
+755; then bring it up in your browser by calling it from the URL at which it is located.
+This will update all of your current member database for use with v2.0.0<p>
+<b><li></b> Next you will need to create a new directory where the script data files will be
+stored (this is not where the actual .cgi files will be located).  We recommend just creating
+a new directory in the location of your current .cgi files.  For example, if your current cgi
+files are located in <font face="Courier">/usr/home/username/cgi-bin/autorank</font> then you
+should create a directory such as <font face="Courier">/usr/home/username/cgi-bin/autorank/sdata</font><p>
+<b><li></b> In this new directory you have just created, upload the errors.dat and admin.dat files.<p>
+<b><li></b> Next, open functions.cgi, rankem.cgi, and out.cgi and set the variable in each of these
+files to the full path of the directory you just created and uploaded the two files to.<p>
+<b><li></b> You can now remove all files from your current cgi directory, and remove the backup directory
+that was used by AutoRank Pro v1.3.0.  Upload all the cgi files into the directory where your cgi files
+used to be, and chmod them all to 755.<p>
+<b><li></b> Now you are ready to run setup.cgi.  Bring it up in your browser by pointing it to the
+URL at which it is located.  This is where you will set all your variables; descriptions of each are included
+in the setup.cgi form.  Use the default password admin to store the variables.<p>
+<b><li></b> Once you have stored the variables you can verify the setup by calling setup.cgi with a ?verify at the
+end of it. (ie http://www.domain.com/cgi-bin/autorank/setup.cgi?verify).<p>
+<b><li></b> If all tests pass, you'll need to go to the admin script and setup headers, footers, list breaks,
+signup page HTML, and table or template properties for your list.  After you have done that, re-rank the list
+using the function included in the admin script.<p>
+<b><li></b> That's all!  You should now be able to continue normal script operations.  One change is that the
+addition form is now located at accounts.cgi.  Editing and stats is available by calling accounts.cgi with the
+?edit on the end (ie http://www.domain.com/cgi-bin/autorank/accounts.cgi?edit)<p>
+
+</ol>
+</td>
+</tr>
+</table>
+
+<p><br><br><br><br><br><br><br>
+
+<a name="update"><h3>v2.0.x to v2.0.4 Update</h3></a>
+
+To upgrade a v2.0.x to v2.0.4 you will need to update the following files:
+<ul>
+<li> accounts.cgi
+<li> admin.cgi
+<li> rankem.cgi
+<li> out.cgi
+<li> functions.cgi
+<li> setup.cgi
+<li> admin.dat
+<li> errors.dat
+<li> All template files in the templates folder
+</ul>
+
+You will need to create a new folder in your script directory to hold the<br>
+template files.  Upload all of them in ASCII mode to that directory.
+
+<p>
+
+Then in setup.cgi you will need to setup a few new variables.  Once that is <br>
+complete you will be ready to continue use.
+
+<p>
+<b><font color="red">All technical support issues should be taken up in the owners lounge, either through
+the help board or using the tech support form</font>
+<p>

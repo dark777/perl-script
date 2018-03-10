@@ -1,0 +1,143 @@
+################################################################################
+# eUpload                                      Version 1.0                     #
+# Copyright 2000 Frederic TYNDIUK (FTLS)       All Rights Reserved.            #
+# E-Mail: tyndiuk@ftls.org                     Script License: GPL             #
+# Created  01/01/2000                          Last Modified 01/01/2000        #
+# Scripts Archive at:                          http://www.ftls.org/cgi/        #
+################################################################################
+
+
+1. Qu'est ce que c'est ?
+========================
+
+	 Ce script permet aux utilisateurs de navigateurs compatibles RFC1867 de
+charger à partir de leurs navigateurs des fichiers sur votre serveur.
+L'Administrateur peut configurer pour chaque utilisateur où les fichiers
+doivent être sauvés. Ce scripts est idéal pour autoriser les utilisateurs
+à enregistrer des fichiers sur votre serveur sans avoir à ouvrir un compte FTP.
+
+
+2. Dépendances:
+===============
+
+	- Perl 5.0 ou une version plus récente; vous pouvez le trouver sur
+http://www.perl.com
+	- Un serveur Web avec la possibilité d'ajouter/exécuter des scripts CGI.
+
+
+3. Que contient cette archive ?
+===============================
+
+	Cette Archive contient 6 fichiers différents:
+        1) COPYING:      La licence de ce programme (GPL).
+       	2) README:       La doc en anglais...
+    	3) LISEZMOI:     Ce fichier...
+	    4) upload.cgi:   Le script.
+	    5) upload.html:  Le formulaire HTML.
+	    6) password.txt: Le fichier des mots de passe...
+
+
+4. Installation et configuration:
+=================================
+
+	C'est un script Perl, l'installation est simple. Vous n'avez pas besoin
+de compiler quelque chose...
+
+	Copiez *.cgi dans le répertoire /cgi-bin/
+	Copiez *.txt dans le répertoire data.
+	Copiez *.html sur votre site web.
+	Rendez les exécutable (chmod a+rx *.cgi) Unix seulement...
+	Rendez les fichiers donnés modifiable (chmod a+rw *.txt) Unix seulement...
+
+	Pour le bon fonctionnement de ce script, vous avez quelques configurations
+à faire...
+
+		Editez le script CGI (*.cgi) et changez #/usr/bin/perl,
+	si nécessaire...
+
+		Editez la section "Necessary Variables" de  upload.cgi et faite
+	les changements suivant :
+
+	my $DATA_DIR = '/Absolute/path/to/datadir/';
+		# Répertoire des donnés.
+	my $DEFAULT_UPLOAD_DIR = '/tmp/';
+		# Répertoire par défaut où seront sauvées les fichiers chargés.
+
+	my $MAX_SIZE_UPLOAD = 25; # Ko
+		# Permet de limiter la taille à $MAX_SIZE_UPLOAD (0 Pas de limite), 
+		# si supérieur, crée un 'Internal Server Error'.
+
+	my $FORM_URL = 'http://www.yourdomain.com/upload.html';
+		# URL du formulaire Upload.
+
+	my $WEBMASTER_EMAIL = 'you@yourdomain.com';
+		# E-Mail du webmaster.
+	
+	my $DISPLAY_LANG = 'Fr';
+		# 'Fr' pour avoir les messages en français, sinon ils seront en anglais.
+	
+	my $USE_PASSWORD_PROTECT = 1;
+		# 1 pour utiliser la protection par mots de passe.
+	my $PASSWORD_FILE = $DATA_DIR.'password.txt'; 
+		# Non du fichier de mots de passe.
+
+	Editez 'upload.html' pour changer le look du formulaire, mais ni ne modifiez,
+	ni ne supprimez les noms des champs du formulaire.
+	
+
+5. Comment l'utiliser ?
+=======================
+
+	Utiliser l'uploader:
+		Allez sur l'adresse du formulaire ou sur '/cgi-bin/upload.cgi' et essayez
+	le. Login / password par défaut sont respectivement 'member' et 'member',
+	le répertoire de chargement par défaut est '/tmp'.
+
+	Utiliser l'écran d'administration:
+		Allez sur l'adresse '/cgi-bin/upload.cgi?ac=admin'.
+		Vous pouvez alors ajouter, éditer, supprimer des utilisateurs, pour chacun
+	vous devez précisez les informations suivantes : login, mot de passe, droits
+	(Administrateur / Visiteur), répertoire de chargement.		
+
+
+6. Histoire:
+============
+
+	Version 1.0         01/01/2000  - Création du script.
+
+
+7. Copyright:
+=============
+
+	This software is copyright (C) 1999 Frédéric TYNDIUK. It is distributed
+under the terms of the GNU General Public License (GPL). Because it is licensed
+free of charge, there is NO WARRANTY, it is provided AS IS. The author can not
+be held liable for any damage that might arise from the use of this software.
+Use it at your own risk. 
+	See the file COPYING for more details (or http://www.gnu.org/).
+
+
+8. Nouvelles versions:
+=====================
+
+	Les nouvelles versions ainsi que d'autres scripts sont disponibles sur:
+
+		http://www.ftls.org/fr/
+
+
+9. Contact:
+===========
+	
+	N'hésitez pas à m'envoyez un mail si vous avez des commentaires, des
+suggestions, si vous trouvez des bugs, ou si vous avez des critiques, ou juste
+pour me dire que vous aimez ce programme...
+
+	Si vous avez des problèmes de configuration, d'utilisation de ces
+scripts, relisez ce document en premier, si vous ne trouvez pas la 
+solution, n'hésitez pas à me contacter...
+
+	E-Mail: tyndiuk@ftls.org
+	Web: http://www.ftls.org/
+
+
+                                                  Frédéric TYNDIUK

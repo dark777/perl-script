@@ -1,0 +1,46 @@
+  <html>
+  <head>
+    <title>Account Statistics</title>
+  <body bgcolor="white" link="blue">
+  <div align="center">
+<form method="POST">  <table cellpadding="1" cellspacing="0" border="0" align="center" width="350">
+  <tr>
+  <td bgcolor="#000000">
+  <!-- INNER TABLE --> 
+  <table cellpadding="5" cellspacing="1" border="0" width="100%">
+  <tr>
+  <td bgcolor="#afafaf" align="center" colspan="2">
+  <font face="Verdana,Arial" size="4">
+  <b>Account Statistics</b>
+  </font>
+  </td>
+  </tr>
+  <tr bgcolor="#dcdcdc">
+  <td align="right">
+  <font face="Verdana, Arial" size="2"><b>
+  Hits In Since Last Reset</b>
+  </td>
+  <td bgcolor="white">
+  <font face="Verdana, Arial" size="2">#%HITS_IN%#
+  </td>
+  </tr>
+  <tr bgcolor="#dcdcdc">
+  <td align="right">
+  <font face="Verdana, Arial" size="2"><b>
+  Hits Out Since Last Reset</b>
+  </td>
+  <td bgcolor="white">
+  <font face="Verdana, Arial" size="2">#%HITS_OUT%#
+  </td>
+  </tr>
+  <tr bgcolor="#dcdcdc">
+  <td align="right">
+  <font face="Verdana, Arial" size="2"><b>
+  Total Hits In Since Signup</b>
+  </td>
+  <td bgcolor="white">
+  <font face="Verdana, Arial" size="2">#%TOT_HITS_IN%#
+  </td>
+  </tr>
+  </table>
+  </td></tr></table><p>

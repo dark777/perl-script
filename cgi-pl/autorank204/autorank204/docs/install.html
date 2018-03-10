@@ -1,0 +1,348 @@
+<html>
+<head>
+	<title>AutoRank Pro v2.0.4 Installation File</title>
+</head>
+
+<body bgcolor="white" text="black" link="blue">
+
+<div align="center">
+
+<table width="600"><tr><td>
+<font face="Verdana" size="2">
+
+<div align="center">
+
+<h2>AutoRank Pro v2.0.4 Installation Manual</h2>
+
+<font size="1">
+[ <a href="#install">Installation</a> ] | 
+[ <a href="template.html">HTML Template Feature</a> ] | 
+[ <a href="#templates">Templates</a> ] | 
+[ <a href="#cron">Cron Help</a> ] | 
+[ <a href="#tech">Tech Support</a> ]
+</font>
+
+</div>
+
+<hr width="550" size="1" align="center" noshade>
+
+<b><a name="install">Installation Procedure</a></b>
+
+<font size="1">
+
+<ol>
+
+<b><li></b> Unpack the AutoRank Pro archive that you downloaded, using directory names.<p>
+
+<b><li></b> Open all of the files that have a .cgi extension in a text editor.  You will need to set
+the location of Perl 5 on your server.  This is done on the first line of the file:
+<p>
+<font face="Courier" size="2">#!/usr/bin/perl</font>
+<p>
+Change the /usr/bin/perl value to match your system's setup.  If you have telnet access you can locate
+perl by typing the following command:
+<p>
+<font face="Courier" size="2">which perl</font>
+<p>
+In most cases, /usr/bin/perl or /usr/local/bin/perl is a valid setting.  Note that <b>this must point to
+Perl 5</b>.  Ask your server administrator if you are unsure about the perl location.<p>
+
+<b><li></b> Login to your FTP server, and change into the directory where you will be installing the
+CGI scripts.  (We recommend that this directory be inside a cgi-bin or equivalent directory) In that
+directory, create 3 more directories.  Name them data, sdata, and templates.
+These directories will contain all of the files that control script operation.  The HTML files that
+the script creates (the files that contain the list) will need to be in a seperate directory located
+outside of the cgi-bin.<p>
+
+<b><li></b> Open the files rankem.cgi, functions.cgi, and out.cgi in a text editor.  You will now need
+to set the one variable - <b>$FUNCTIONS::SCRIPT_DATA_DIR</b> - in each of these files.  That variable
+needs to be set to the full Unix path to the sdata directory that you just created.  Once you have set
+that variable in all three of those files, save them.  Note that you should not put a / at the end
+of the directory path!<p>
+
+<b><li></b> Now, upload all of the .cgi files to the directory that you want them installed in.  Make
+sure that you are uploading in ASCII mode.  Next, upload the errors.dat and admin.dat files to the
+sdata directory that you created - again in ASCII mode.  Finally, upload all of the .htmlt files
+to the templates directory that you created - in ASCII mode.<p>
+
+<b><li></b> You will now need to set permissions on the files you uploaded, and directories that
+you created.  Below you will see a table with recommended permissions settings.  These settings 
+should work for most servers, however others may require different settings.<p>
+
+<table border="0" cellpadding="0" cellspacing="0" width="350"><tr><td bgcolor="#000000">
+
+<table width="100%" cellspacing="1" cellpadding="3" border="0">
+<tr>
+<td bgcolor="#afafaf" align="center"><font face="Verdana" size="1"><b>File or Directory</b></font></td>
+<td bgcolor="#afafaf" align="center"><font face="Verdana" size="1"><b>Permissions</b></font></td>
+</tr>
+<tr>
+<td bgcolor="#dcdcdc"><font face="Verdana" size="1">All .cgi Files</font></td>
+<td bgcolor="#dcdcdc" align="center"><font face="Verdana" size="1">755</font></td>
+</tr>
+<tr>
+<td bgcolor="#dcdcdc"><font face="Verdana" size="1">admin.dat</font></td>
+<td bgcolor="#dcdcdc" align="center"><font face="Verdana" size="1">644</font></td>
+</tr>
+<tr>
+<td bgcolor="#dcdcdc"><font face="Verdana" size="1">errors.dat</font></td>
+<td bgcolor="#dcdcdc" align="center"><font face="Verdana" size="1">644</font></td>
+</tr>
+<tr>
+<td bgcolor="#dcdcdc"><font face="Verdana" size="1">sdata</font></td>
+<td bgcolor="#dcdcdc" align="center"><font face="Verdana" size="1">777</font></td>
+</tr>
+<tr>
+<td bgcolor="#dcdcdc"><font face="Verdana" size="1">data</font></td>
+<td bgcolor="#dcdcdc" align="center"><font face="Verdana" size="1">777</font></td>
+</tr>
+<tr>
+<td bgcolor="#dcdcdc"><font face="Verdana" size="1">templates</font></td>
+<td bgcolor="#dcdcdc" align="center"><font face="Verdana" size="1">755</font></td>
+</tr>
+<tr>
+<td bgcolor="#dcdcdc"><font face="Verdana" size="1">All .htmlt Files</font></td>
+<td bgcolor="#dcdcdc" align="center"><font face="Verdana" size="1">644</font></td>
+</tr>
+<tr>
+<td bgcolor="#dcdcdc"><font face="Verdana" size="1">Directory where list HTML files will be written</font></td>
+<td bgcolor="#dcdcdc" align="center"><font face="Verdana" size="1">777</font></td>
+</tr>
+</table>
+
+</td></tr></table>
+
+<p>
+
+<pre>
+Example Directory Structure
+/home/username/cgi-bin/autorank                   location of .cgi files
+/home/username/cgi-bin/autorank/sdata             location of script data files (admin.dat, errors.dat)
+/home/username/cgi-bin/autorank/data              location of member data files (created by script)
+/home/username/cgi-bin/autorank/templates         location of all template files
+/home/username/public_html/toplist              where the list HTML files will be written
+</pre>
+
+<p>
+
+<b><li></b> You are now ready to begin the WWW based portion of the setup.  In your browser, type in 
+the full URL to the setup.cgi file on your server.  This will bring up the portion of the script where
+you will set all of the variables.  Details and examples for each variable are given, so follow along
+through that to get all of the variables set properly.<p>
+After you have set all of the variables, enter the default password <b>admin</b> and click the button.
+If everything went well, you will be presented with a page telling you that the variables have been
+recorded.  To do further verification of your settings you can call the setup.cgi script like setup.cgi?verify.
+This will preform a series of tests and report the results.<p>
+
+<b><li></b> You should now be ready to begin using the scripts.  The first thing you will want to do is
+point your browser to admin.cgi.  Login using the default password <b>admin</b> - make sure you press
+the login button with your mouse pointer and not simply hit enter on your keyboard.  Once inside the
+admin script you can start exploring the features, but make sure that you change your administrative
+password soon after your initial installation.<p>
+Before re-ranking the list you <b>must</b> setup table properties or an HTML template from the second
+pulldown menu.  Failure to do so will result in an error being reported.<p>
+To get descriptions of the administrative functions, you can view the admin_f.html file included with
+the distribution.  This file details what each of the functions do.
+</ol>
+
+<p>
+
+<font size="2"><b>Other Installation Notes</b></font>
+
+<p>
+
+<ul>
+<li> If you chose to use cron then you will also need to open <b>cron_rr.cgi</b> and <b>cron_rs.cgi</b>
+and edit a few of the same variables in those files.  You can then upload those files to the same directory
+as the other .cgi files, and set their permissions to 755.  A crontab entry will need to be made so the
+scripts will execute at the proper times - more information about that is aviable at the bottom of this file.
+cron_rr.cgi reranks the list with the current information; cron_rs.cgi resets all counters to zero.<p>
+
+<li>You will need to <b>provide a link</b> to the page where <b>webmasters can add their site</b>
+when you edit the header and footer files for your list.  Somewhere in the header/footer
+<b>place a link that points to accounts.cgi</b> so people can add their site.  If you want
+members to be able to edit their own information <b>place a link that points to
+accounts.cgi?edit</b>.<p>
+
+<li>If you notice any bugs or have any problems, contact us using the <a href="#tech">information</a> at the
+bottom of this file.
+</ul>
+
+<p>
+
+<hr width="550" size="1" align="center" noshade>
+
+<p>
+
+<font size="2"><a name="templates"><b>Templates</b></a></font>
+
+<p>
+
+This feature is implemented in v2.0.4, however it is still in development stages.  We will not be
+adding documentation until it is complete, so if you want to edit the template files you will be
+doing so at your own risk!
+
+<p>
+
+<hr width="550" size="1" align="center" noshade>
+
+<p>
+
+<font size="2"><a name="cron"><b>Cron And AutoRank Pro</b></a></font>
+
+<p>
+
+<ul>
+<li><b>What Is Cron?</b>
+<pre>
+Cron jobs are a way of automating tasks that you 
+want done every week/month/day and at a certain time.
+
+NOTE: cron needs full paths for everything, so you 
+must use full paths in the variables in a cgi script
+
+<li><b>A Quick Overview Of Crontab Entries</b>
+
+An example of a crontab entry could be:
+25 0 1 * * /usr/web1/home/html/cgi-bin/update.cgi
+
+which runs a script in /usr/web1/home/html/cgi-bin called update.cgi
+at 12:25 am on the first of every month. 
+
+<li><b>In Depth Explanation of A Crontab Entry</b>
+
+An entry consists of two parts - a time to run, and a command to run. 
+
+The time to run (the first part of the entry) is broken up into 5 fields: 
+1. minute of the hour 
+2. hour of the day (on the 24 hour clock) 
+3. day of the month 
+4. month of the year (1 = January, 2 = February, etc.) 
+5. day of the week (0 = Sunday, 1 = Monday, 2 = Tuesday, ..., 6 = Saturday) 
+
+A &quot;*&quot; in one of these fields indicates that the job should be executed 
+at any or every one of these, so for instance a &quot;*&quot; in the month of the 
+year field means that this task should be carried out every month at the 
+time specified in the other fields. A &quot;*&quot; in the day of the week field, 
+when there is something in the day of the month field, does not mean that 
+this task should be carried out every day, but rather that it should be 
+carried out on the appointed day of the month regardless of what weekday 
+it is. Only &quot;*&quot;s in the day of the week field, and the day of the month 
+field, and the month of the year field would indicate a daily task. 
+
+Examples: 
+
+The job with this time to run would run every Sunday at 12:20 am. 
+20 0 * * 0
+This job would run at midnight on any Friday the 13th. 
+0 0 13 * 5
+
+You don't have to put just one time in a field. This job, for instance, would 
+run every day at 12:30am, 2:30am, 4:30am, 6:30am, 6:30pm, 8:30pm, and 10:30pm: 
+30 0,2,4,6,18,20,22 * * *
+
+This one would run every Tuesday and Friday at 5:30 am: 
+30 5 * * 2,5
+
+<li><b>Using Cron Jobs With AutoRank Pro</b>
+
+Create a new file named cronfile.
+Any other cron jobs you are running should also be placed in this file.
+In this file you will put the following lines:
+
+00 0 * * * /full_path_to/cgi-bin/cron_rs.cgi
+30 * * * * /full_path_to/cgi-bin/cron_rr.cgi
+
+This will run cron_rs.cgi every night at 12:00:00 AM
+and cron_rr.cgi every hour on the half hour.
+
+cron_rs.cgi resets all counters to zero, and cron_rr.cgi re-ranks the list. 
+ 
+If you want these scripts to be run at times other than those, just edit
+the times according to how you want it set up.  However, you should have it 
+set so that the re-rank and reset script do NOT run at the same time or else
+you will have a blank list until the next re-rank.
+
+Now upload cronfile to your server in ASCII mode.
+Telnet into your account and go to the dir you uploaded cronfile into.
+
+Type: crontab cronfile
+
+This should set your cron job.
+
+If you want to check to make sure it was entered correctly you can type:
+crontab -l 
+
+If you want to remove all cron jobs you can type:
+crontab -r
+
+<li><b>Why should I use cron?</b>
+
+Cron will give you extremely accurate update times, whereas with
+regular cgi you will probably not have this.  With regular cgi updates
+the only time the list can be updated or reset is when someone activates
+the scripts by clicking on a link to your top list.  So say you have your
+list set to re-rank every 30 minutes, but no one clicks on a link to your
+list for 45 minutes.  Then the list will not be updated for a period of 45
+minutes.  An even bigger problem is with reseting the list.  If someone
+doesn't click on your link at the time you want the list to reset it will
+throw it totally off.  For example, say the first time the list is set to
+reset is at midnight, but no one clicks until 12:30.  That will change
+the next reset to 12:30 the next night instead of 12:00.
+
+
+Put simply, cron will make your list much more accurate, and can reduce the load
+on your server.  If you have it available on your system, please use it.  It is
+very simple to set up, and if you need any help you can always get it from us!
+</pre>
+</ul>
+
+<hr width="550" size="1" align="center" noshade>
+
+<p>
+
+<font size="2"><a name="tech"><b>Technical Support</b></a></font>
+
+<p>
+
+<ul>
+<li><b>Where To Go To Get Tech Support</b><p>
+If you need any assistance you can contact us via e-mail by using the
+tech support page in the owners lounge at:
+<a href="http://www.cgi-works.net/members/">
+http://www.cgi-works.net/members/</a><p>
+Or you can post a message on our members only message/help board at:<br>
+<a href="http://www.cgi-works.net/members/board/board.cgi">
+http://www.cgi-works.net/members/board/board.cgi</a>
+
+<p>
+
+<li><b><font color="Red">IMPORTANT NOTES ABOUT TECH SUPPORT:</font></b><p>
+
+<b>VERY IMPORTANT:</b> If you edit the scripts in any way other than described
+above, you will no longer be eligible for technical support.<br>
+<b>WE WILL NOT PROVIDE SUPPORT FOR EDITED SCRIPTS!</b>
+
+<p>
+
+The only two ways we provide support for our commercial scripts are listed above.
+We do it this way to make sure we are providing support only to those who have paid
+for the scripts and deserve the support.  If you post a message at the General CGI Board
+it will not be answered by us, you must post on the Owners Lounge board.  Also sending
+a plain e-mail to us will be ignored, you must use the tech support form in the Owners Lounge.
+
+<p>
+
+These two methods also help to ensure that we are not wasting our time providing
+support for illegal copies of our software, and will result in faster responses
+to legitimate owners questions.
+
+<p>
+
+Thank You, and enjoy your new script!
+
+</ul>
+</td></tr></table>
+
+</body>
+</html>

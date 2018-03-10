@@ -1,0 +1,48 @@
+  <html>
+  <head>
+    <title>Edit Account/Check Stats</title>
+  <body bgcolor="white" link="blue">
+  <div align="center">
+<form method="POST">  <table cellpadding="1" cellspacing="0" border="0" align="center" width="300">
+  <tr>
+  <td bgcolor="#000000">
+  <!-- INNER TABLE --> 
+  <table cellpadding="5" cellspacing="1" border="0" width="100%">
+  <tr>
+  <td bgcolor="#afafaf" align="center" colspan="2">
+  <font face="Verdana,Arial" size="4">
+  <b>Edit Account/Check Stats</b>
+  </font>
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="#dcdcdc">
+  <font face="Verdana,Arial" size="2"><b>
+  Username:
+  </td>
+  <td bgcolor="#ffffff">
+  #%USERNAME_FIELD%#
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="#dcdcdc">
+  <font face="Verdana,Arial" size="2"><b>
+  Password:
+  </td>
+  <td bgcolor="#ffffff">
+  #%PASSWORD_FIELD%#
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center" colspan="2">
+  #%EDIT_RADIO%# <font face="Verdana,Arial" size="2">Edit Account</font><br>
+  #%STATS_RADIO%# <font face="Verdana,Arial" size="2">View Stats</font>
+  </td>
+  </tr>
+  <tr>
+  <td bgcolor="white" align="center" colspan="2">
+  #%SUBMIT_BUTTON%#
+  </td>
+  </tr>
+  </table>
+  </td></tr></table><p>
