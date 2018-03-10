@@ -1,0 +1,16 @@
+Esse script cria um Mural de Recados. Simples e fácil de configurar.
+https://www.scriptbrasil.com.br/script/cgi/mural.zip
+#######################################################
+#          Home Page: http://www.cgiclube.net         #
+#                                                     #
+#######################################################
+#######################################################
+
+Download feito no Site :
+
+        -------------------------
+        www.  CGiClube . Net
+        -------------------------
+
+Qualquer dúvida na instalação desse CGI entre em nosso 
+Web Site que esclarecemos para você
