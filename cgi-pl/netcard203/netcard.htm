@@ -1,0 +1,126 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<title>netcard.html</title>
+</head>
+
+<body bgcolor="#FFFFFF" background=images/background.gif>
+
+<blockquote>
+<h2><font size="2" face="Arial">
+Your Business Card on the Net!</font></h2>
+
+<p><font size="2" face="Verdana">To create your own net-card, fill
+out the form below and press submit. And you will have a bussiness
+card on the web. And best of all, it's absolutely FREE. </font></p>
+
+
+<!-- ################################### -->
+<!-- CHANGE THIS ADDRESS TO YOUR CGI-BIN -->
+<form action=netcard2.pl method=post>
+<TABLE BORDER=0>
+<p align=left>
+	<tr><td>
+	<font size="2" face="Verdana">Login Name: </font>
+	</td><td>
+	<input type=text color=grey name=0 size=25><i>(required)</i>
+	</td></tr>
+	<TR><TD>
+	<font size="2" face="Verdana">Name: </font></td>
+	<td>
+	<input type=text color=grey name=1 size=25>
+	</td></tr>
+	<tr><td>
+	<font size="2" face="Verdana">Position:</font>
+	</td><td>
+	<input type=text color=grey name=2 size=25>
+	</td></tr>
+	<tr><td>
+	<font size="2" face="Verdana">Company:</font>
+	</td><td>
+	<input type=text color=grey name=3 size=25>
+	</td></tr>
+	<tr><td>
+	<font size="2" face="Verdana">Address:</font>
+	</td><td>
+	<input type=text color=grey name=4 size=25>
+	</td></tr>
+	<tr><td>
+	<font size="2" face="Verdana"></font>
+	</td><td>
+	<input type=text color=grey name=5 size=25>
+	</td></tr>
+	<tr><td>
+	<tr><td>
+	<font size="2" face="Verdana">Tel:</font>
+	</td><td>
+	<input type=text color=grey name=6 size=25>
+	</td></tr>
+	<tr><td>
+	<font size="2" face="Verdana">Fax:</font>
+	</td><td>
+	<input type=text color=grey name=7 size=25>
+	</td></tr>
+	<tr><td>
+	<font size="2" face="Verdana">Email:</font>
+	</td><td>
+	<input type=text color=grey name=8 size=25>
+	</td></tr>
+	<tr><td>
+	<font size="2" face="Verdana">Web Page:</font>
+	</td><td>
+	<input type=text color=grey name=9 size=25>
+	</td></tr>
+	<tr> <p><td>
+</table>
+<p><font size="2" face="Verdana">Select a Logo:</font></p>
+
+    <p><input type="radio" checked name="logo" value="images/logo1.gif">
+	<font size="2" face="Verdana">
+	<img src="images/logo1.gif"> </font>
+    <input type="radio" name="logo" value="images/logo2.gif">
+	<img src="images/logo2.gif">
+    <input type="radio" name="logo" value="images/logo3.gif">
+	<img src="images/logo3.gif">
+    <input type="radio" name="logo" value="images/logo4.gif">
+	<img src="images/logo4.gif">
+    <input type="radio" name="logo" value="images/logo5.gif">
+	<img src="images/logo5.gif">
+    <input type="radio" name="logo" value="images/logo11.gif">
+	<img src="images/logo11.gif">
+    <input type="radio" name="logo" value="images/logo12.gif">
+	<img src="images/logo12.gif">
+<br>
+    <input type="radio" name="logo" value="images/logo6.gif">
+	<img src="images/logo6.gif">
+    <input type="radio" name= "logo" value="images/logo7.gif">
+	<img src="images/logo7.gif">
+    <input type="radio" name="logo" value="images/logo8.gif">
+	<img src="images/logo8.gif">
+    <input type="radio" name="logo" value="images/logo9.gif">
+	<img src="images/logo9.gif">
+    <input type="radio" name="logo" value="images/logo2.gif">
+	<img src="images/logo10.gif">
+<br>
+	<input type="radio" name="logo" value="upload"> Upload
+<br>
+
+	<input type="radio" name="logo" value="url">
+	URL for Logo or Photo: 
+	<input type="text" name="logourl" size="25" value="http://">
+
+<br>
+
+<br>
+
+</p>
+
+	<p>&nbsp;</p>
+	<input type=hidden name=preview value=1>
+    <p><input type="submit" name="submit" value=Preview></p>
+</form>
+
+</body>
+</html>

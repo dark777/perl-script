@@ -1,0 +1,133 @@
+EZHOMESITE 
+Installation Instructions
+
+1 Unzip the file ezhomepg.zip into your main webdirectory and maintain its directory structure. The unzipping wil create a directory 'ezhomesite'.
+
+2 The ezhomesite subdirectory at your site should be writeable as this is where all  user pages and reference files will be created 
+
+3 Upload the images directory (and contents) using ftp. follow this structure:
+
+       userpages
+         images
+           backgrounds
+           bullets
+           email
+           lines
+           pictures
+
+       Notes: 
+	The logo, header.gif should be placed in /ezhomesite/images 
+	Feel free to use your own header graphics
+	The button, button.gif should be placed in /ezhomesite/images
+	Feel free to use your own button as long as you leave the footer intact.	
+
+	Remove any extraneous files possibly left behind by ftp programs (ws_ftp usually leaves behind a log file called ws_ftp.log). if they are not deleted, they are included as clip art selections (but broken)! 
+
+4. Edit 'index.html' and change the link to the logo image (header.gif) and the links to the cgi script. upload this to /ezhomesite;  allow read and write permissions (chmod to 777) 
+
+5. Upload 'data.txt' to /ezhomesite  and allow read and write permissions (chmod to 777) 
+
+6. Edit 'ezhomesite.pl' and adjust the parameters to agree with the website directory structure. Upload this to your cgi directory and allow read and execute permissions (chmod to 755) 
+   
+Below is the segment of ezhomesite.pl that describes the variables that need to be changed:
+
+# These variables need to be set
+
+# Set this to your base HTML directory. This is a PATH not a URL
+$base_dir = "/yourbasedir/yourname/ezhomesite";
+
+# This is your URL of where the cgi programs are kept
+$cgiurl = "http://www.yourwebsite.com/yourname/cgi-bin";
+
+# This is your URL of where the new HTML pages will be kept. keep the trailing slash
+$baseurl = "http://www.yourwebsite.com/yourname/ezhomesite/";
+
+# This is a URL and dir for the images sub directory in the ezhomesite directory.
+# Create the images directory in the ezhomesite directory. This is where
+# you will upload your background images
+$imageurl = "$baseurl" . "images";
+$imagedir = "$base_dir/images";
+
+#directory for the pictures
+$tnp_dir_url = "$imageurl/pictures";
+$tnp_dir = "$imagedir/pictures";
+#directory for the lines graphics
+$tn_dir_url = "$imageurl/lines";
+$tn_dir = "$imagedir/lines";
+#directory for the background graphics
+$tnbg_dir_url = "$imageurl/backgrounds";
+$tnbg_dir = "$imagedir/backgrounds";
+#directory for the emailgif graphics
+$tne_dir_url = "$imageurl/email";
+$tne_dir = "$imagedir/email";
+#directory for the bullets graphics
+$tnb_dir_url = "$imageurl/bullets";
+$tnb_dir = "$imagedir/bullets";
+
+# This is the path for user pages. You don't really need to change this
+# Just make sure to create a directory: ezhomesite and chmod it 777
+$page_dir = "$base_dir/";
+
+# This is the index of all pages created by HPM
+# This file should be chmod to 777 and placed in the ezhomesite directory
+$indexpage = "$base_dir/index.html";
+
+# This is the location of the data.txt file. This holds each user's
+# login name and e-mail address for confirmation
+$data = "$base_dir/data.txt";
+
+#Site title
+
+$title="Your title";
+
+# self explanatory variables for your site logo
+$logo = "$imageurl/header.gif";
+$logoalt = "EZHomesite";
+
+# Location of the sendmail program
+$sendmail = '/usr/bin/sendmail';
+
+# Your e-mail address here
+$myemail = 'yourname@your.web.site';
+
+# That's it.
+  -----
+
+Technical Notes
+-------------------
+1. it is easy to make a typo so please make sure you've typed the correct directories
+   and URL's required. note that $base_dir is the absolute path to the subdirectory where 
+   the pages will be located.
+2. don't forget to supply the location of the sendmail program (ie. $sendmail)
+3. i've only proven that ezhomesite.pl works in an apache server unix environment under perl5+
+   and the grep command works inside perl. if your setup does not work - do you have perl5? 
+   are you running a unix server?  does grep run inside perl?
+4. if the pages get created but the index page does not get updated, make sure the 
+   permissions to index.html is set to writeable.
+5. if it still does not work, i can only guess that the file lock command ("flock") is not
+   working properly.  please comment out (or delete) the "flock" statements relating to the
+   index.html file
+   NOTE: the above workaround is risky because there is a possibility that the index file 
+   may be updated by multiple users.
+
+   regarding the above, Ed Williams <Ed@lit-arts.com>, provided this code sample, 
+   as a less risky alternative 
+   INSTEAD OF...
+   --------
+    open(FILE, "$indexpage") || die "I can't open that file\n";
+    # flock (FILE, 2) or die "can't lock index file\n";
+        @lines = <FILE>;
+        close(FILE);
+    -----
+   USE THIS CODE...
+   --------
+    while (-f data.lock){
+        select (undef,undef,undef,0.1);}
+    open (LOCKFILE,">data.lock");
+    open(FILE, "$indexpage") || die "I can't open that file\n";
+    # flock (FILE, 2) or die "can't lock index file\n";
+        @lines = <FILE>;
+        close(FILE);
+    close (LOCKFILE);
+    unlink (data.lock);
+    -----

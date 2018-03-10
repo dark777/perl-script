@@ -1,0 +1,107 @@
+Processa as informações de um formulário de e-mail.
+https://www.scriptbrasil.com.br/script/cgi/html/formprocessor.zip
+#######################
+# form_processor.pl 1.0 README
+#
+# By Command-O Software
+# http://www.command-o.com
+# Programmer: Kendall Comey
+# Support: support@command-o.com
+# Copyright 1997 - 2000
+# All Rights Reserved
+########################
+This script will process an html form. The following options are available:
+1. Form data can be emailed,
+2. Form data can be written to a file. 
+3. Email addresses can be written to a database.
+4. A text file can be emailed to form user. 
+5. Include field names.
+
+###
+General Instructions
+###
+Install form_processor.pl in your cgi-bin and chmod to 755. Install cgi-lib.pl in your cgi-bin and chmod to 755.
+
+The html form you design must include the following fields:
+
+<input type="hidden" name="admin" value="your_email@your_server.com">
+<input type=hidden name="subject" value="Subject of Email to Yourself">
+<input type=hidden name="redirect" value=
+"http://www.page_shown_after_submit.com">
+
+The form action must point to the location of the script on your server.
+<form action="/cgi-bin/form_processor.pl" method="POST">
+
+In additon, if you are using Option No. 4, the field that gets the users email address MUST be named user_email.
+<input type="TEXT" name="02)user_email">
+(any digits may be used, purpose of digits is explained below)
+
+When designing the html form, all fields that you want input from must begin with a digit and a right parenthesis i.e. <input type="TEXT" name="01)name" value="Kendall">. The digit serves to order the fields in the results you receive.
+For instance;
+<input type="TEXT" name="01)name" value="Kendall">
+<input type="TEXT" name="02)email" value="kendall@command-o.com">
+Returns:
+name -- Kendall
+email -- kendall@command-o.com
+
+Whereas;
+<input type="TEXT" name="02)name" value="Kendall">
+<input type="TEXT" name="01)email" value="kendall@command-o.com">
+Returns:
+email -- kendall@command-o.com
+name -- Kendall
+
+Keep in mind that the name of the field (minus the digits and parenthesis) will be used as the description of the field in the results you receive. 
+
+If you want a field to be required, use the following:
+<input type="TEXT" name="01)required-name" value="Kendall">. 
+This will give the user a message that he needs to fill in the "name" field to continue. This example will produce the following result:
+name -- Kendall
+
+###
+Options
+###
+1. To  have the results of the form emailed to you, the script variable $email_admin must be set to 1.
+$email_admin = 1;
+If you do not want the results emailed to you, set this to 0.
+
+2. To  have the results of the form written to a text file, the script variable $write_form_info must be set to 1.
+$write_form_info = 1;
+If you do not want the results written to a text file, set this to 0. 
+
+If this option is set to 1, you must include the system path to the file you want the results written to in the variable $form_info_path. This file must have write permissions. 
+
+3. To  have the email addresses of the users written to a text file (mailing list), the script variable $email_datafile must be set to 1.
+$email_datafile = 1;
+If you do not want the email addresses written to a text file, set this to 0. 
+
+If this option is set to 1, you must include the system path to the file you want the results written to in the variable $email_datafile_path. This file must have write permissions.
+
+4. To use the option of sending a text file via email to the user after the form has been
+filled out, the script variable $send_email_to_user must be set to 1.
+$send_email_to_user = 1;
+If you do not want to email a text file, set this to 0. 
+
+If this option is set to 1, you must include the system path to the file you want to email to the user in the variable $feedback_response_path. This file must have read permissions.
+
+5. To include the field names in the results your receive, the script variable $include_field_name must be set to 1.
+$include_field_name = 1;
+If you do not want the names appearing, set this to 0. 
+
+###
+Other Variables to Set
+###
+$email_subject = "Thank you for your interest";
+This is the subject of the email that is sent to the user if Option No. 4 is selected.
+
+$mailprog = "/bin/sendmail -t";
+This is the system path to your server's sendmail program.
+
+$date_command = "/usr/bin/date";
+This is the system path to your server's date command.
+
+
+
+
+
+

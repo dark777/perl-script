@@ -1,0 +1,191 @@
+####################################
+# Not ready FAQ
+#
+# I am still working on this faq, 
+# I will put it in a nice format soon.
+# Aytekin Tank<aytekin@interlogy.com>
+####################################
+# for updated versions of this faq:
+# http://www.interlogy.com/scripts/netcard/netcard-faq.txt
+
+TOC:
+(1) I get no document found error or I get a blank page?
+(2) Does this script work in Windows NT servers
+(3) I have ... problems, does the script works on hypermart?
+    (or maybe the question is: I dont have webpage or anything, 
+    can I have a net-card script?)
+(4) How to remove a user from list?
+(5) What to do for more complex tasks?
+(6) How can I customize the card?
+(7) How can I put netcards into different categories?
+
+
+####################################
+
+(1) I get no document found error or I get a blank page?
+
+####################################
+ This text includes good explanation for error 404:
+http://www.raingod.com/raingod/resources/Programming/Perl/Notes/CGIDebugging.html
+
+ Most of these problems occur because of these reasons:
+ 1. Did not upload files in ascii format.
+ 2. The directory information is wrong.
+ 3. The directory has not been set to be writable.
+
+ Note: 80% of the emails come because of the directory errors.
+ Before emailing me, ask yourself: 
+ - do I really know the correct directory information and did put it?
+ - did I make the directory writable(777)?
+
+
+
+
+####################################
+
+(2) Does this script work in Windows NT servers
+
+####################################
+
+Yes, it works. But the mail and upload functions does not work.
+ If you have patch for these functions, please send me, many people will appreciate it. I recommend to not to use windows NT. It is a terrible operating system.
+
+
+
+
+
+####################################
+
+(3) I have ... problems, does the script works on hypermart?
+ (or maybe the question is: I dont have webpage or anything, can I have a net-card script?)
+
+####################################
+yes, I installed one to see if works, you can check out the configurations:
+http://server27.hypermart.net/mrgece/cgi-bin/netcard2.cfg
+
+
+
+
+
+####################################
+
+(4) Can you tell me how to remove a visitor's card from the list.html file so that it doesn't appear?  Often, visitors will create 2-3 "practice" cards and 
+I've been unable to delete them from the list without damaging the script
+ and having to reinstall it all over again.
+
+####################################
+For the simplicity, I am not adding new features like admin control to the netcard
+(PM is designed for more complex tasks: http://www.interlogy.com/scripts/pm,
+ and has all features that netcard has), 
+
+You can remove any users from list by only removing the line from the list.
+ Just make sure to not to remove the counter lines, like this: 
+<!--LIST-->
+<!--15--48-->
+
+This keeps track of the page names and number of links in the list page:
+ it contains 15 netcards and this is the 49. list page.
+ So if you want to have same number of pages in every list page,
+ just change 15 to 14 after deletion of the line (You don't have to do this).
+
+
+
+
+
+####################################
+
+(5) I'm using your netcard program and it's fabulous.  Extremely easy to
+install and best off it actually works.  However I would like to use it in
+another form besides a business card...  I
+need to add additional variables to the netcard2.pl script and add
+additional fields to the netcard.htm.  However whenever I do this the script
+simply will not take more that 12 designated.  What can I do to add
+additional variables and fields?  
+
+####################################
+
+Try Profile Manager: http://www.interlogy.com/scripts/pm It gives you
+unlimited number of database fields, modify/delete/search options and total
+freedom on the design of the profiles.
+
+####################################
+
+
+
+
+
+####################################
+
+(6) How can I customize the card?
+
+####################################
+
+OK, let's say, you don't want to use the script as a bussiness card.
+ Let's say, you want to use it as a stamp catolog,
+ where people can see the picture of the stamp at the left side
+ and information about it at the right side. 
+
+1) Go to the netcard.htm and make the fields you dont want to use hidden:
+
+before :  <input type=text color=grey name=2 size=25>
+after  :  <input type=hidden name=2>
+
+2) Open netcard2.cfg with an editor and find the "$cardHTML" in "sub createHTML", and replace it with some other html file:
+
+You can use these variables in the template: 
+
+ $bgcolor	: background color
+ $background	: background image of the card
+ $bgcolorcard	: background color of the card
+ $cardURL	: address of the file
+ $name		: 2. field in the form
+ $position 	: 3. field in the form
+ $company 	: 4. field in the form
+ $address 	: 5. field in the form
+ $address2	: 6. field in the form
+ $tel 		: 7. field in the form
+ $fax 		: 8. field in the form
+ $email 	: 9. field in the form
+ $http 		: 10. field in the form
+ $logo	 	: image url
+ $footerHTML	: footer template which is in netcard.cfg too.
+
+
+3) You can modify the list file similarly by changing $listHTML, $listHEADER, $listFOOTER.
+
+4) I really would like to see what you did. Send me an email with your URL to aytekin@bridgeport.edu.  
+
+
+
+
+
+
+####################################
+
+(7) How can I put netcards into different categories?
+
+####################################
+
+ok, a patch for you, to do this, you should be understood how the select boxes in
+html works.
+if you want to have different lists for different categories, 
+have one $listname field variable in "sub variables" in netcard.pl: 
+
+$listname = $value[7];
+
+(7 can be any number you dont use in the submission form, 
+you will replace that form field with a select box which has the values of the categories)
+
+after these lines in "netcard.pl":
+	#Configuration File:
+	require "netcard2.cfg";
+
+add these two lines:
+	$root = "$root/$listname";
+	$URL = "$URL/$listname";
+
+And you will be putting them into different folders without changing anything else.
+The folders with the specified names should already be created and be writable.
+
+
+
