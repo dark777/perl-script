@@ -1,0 +1,105 @@
+######################################################################
+#                           CGI Busca v2.0                           #
+#                                                                    #
+# Criador: Renan Silveira Elias                                      #
+# E-mail: renan.elias@bol.com.br                                     #
+# ICQ: 89603614 / MSN: rselias@hotmail.com                           #
+# Site: http://www.scriptsnan.rg3.net / http://www.cgiclube.net      #
+#                                                                    #
+#    Você precisa de um CGI para seu site? Entre em contato! Crio    #
+#       seu script do modo que quiser por um preço muito bom.        #
+######################################################################
+
+############################# Informações ############################
+#
+
+   Obrigado por Escolher o CGI Busca v2.0 criado por ScriptsNan.
+   Abaixo todas as informações que você precisará saber para correta
+instalação do Sistema, com todos os seus recursos.
+
+                      #@#@#@ Como Instalar #@#@#@
+
+* Configure o arquivo configuracao.cgi da maneira que for necessário.
+* Tenha conta em um servidor com suporte a CGI/PERL.
+* Envie todos os arquivos do sistema no modo ASCII para o servidor.
+* Após Enviar Todos os arquivos, dê chmod de 755 em todos os arquivos
+que forem do tipo .CGI e chmod 666 em todos os arquivos do tipo TXT.
+* Execute o Arquivo admin.cgi para que o seu diretório do banco de 
+dados fique automaticamente protegido contra roubo.
+* Após isso, execute o arquivo index.cgi. Sua Busca está instalada!
+* Para modificar o design, abra o cima.rse e o baixo.rse no Bloco 
+de Notas do Windows ou qualquer outro editor de texto. Mude nestes
+arquivos o design do buscador. Lembrando que o sistema é do tipo
+header e footer, ou seja, imprime a parte de cima, o conteúdo e a 
+parte de baixo.
+
+                 #@#@#@ Novidades da Versão 2.0 #@#@#@
+
+* Sistema Completo, com buscador eficiente que busca por Nome,
+descrição e url do site.
+* Banco de Dados protegido em diretório separado por senha criptada
+que é gerada pelo sistema automaticamente.
+* Facil alteração de Design, como header e footer.
+* Imagem Junto ao nome dos sites novos cadastrados no sistema.
+* Página dos Sites novos cadastrados no sistema.
+* Modificação dos sites cadastrados.
+* Proteção contra danificações no banco de dados através de cadastros
+e modificações dos mesmos.
+* Facil Instalação.
+* Diretório separado para imagens.
+* Diminuição de Propagandas. Pedimos que deixem algum crédito no 
+sistema, afinal, é grátis e demorou bastante para terminá-lo. :)
+
+                #@#@#@ Novidades da Próxima Versão #@#@#@
+
+* Sistema Desenvolvido utiliando MySQL.
+* Adição da Ferramenta de Patrocínio, onde os sites patrocinados
+aparecerão no topo da Busca.
+* Gerenciador de E-mails para Mail List.
+
+*** Novas Dicas são aceitas.. envie a sua para renan@osimbr.net ***
+
+#
+######################################################################
+
+############################ Configuração ############################
+#
+
+$versao = "2.0";
+# Versão do Seu Sistema. !!!NÃO MUDE!!!
+
+$imagens = "http://localhost/busca2/imagens";
+# URL da Pasta onde se localizam as imagens do Sistema.
+
+$urlsistema = "http://localhost/busca2";
+# Url da pasta principal do Sistema.
+
+$patchx = "/home/renan/public_html/sn/cgibusca";
+# Patch para pasta principal do sistema.
+
+$senhaadmin = "cgibusca";
+# Senha Administrativa.
+
+$enviaremail = "Sim";
+# Enviar E-mail Quando o usuário adicionar o site? Sim ou Não
+
+$porpagina = "15";
+# Quantidade de Sites a serem Listados por Página no Resultado da Busca, na página das categorias e nos sites Novos.
+
+$minimo = "3";
+# Quantidade Mínima de Letras na pesquisa para o Sistema realizar a Busca.
+
+$mailwm = "renan.elias\@bol.com.br";
+# E-mail do WebMaster do Sistema ou do Site. Não se esqueça do \ antes do @! Ex: nome\@email.com
+
+$emailservidor = "/usr/sbin/sendmail";
+# Patch para o Servidor de E-mail
+ 
+$nomesistema = "CGI Busca v$versao";
+# Nome do Sistema
+
+$tnovo="7";
+# Quantidade de dias que um site é considerado Novo.
+
+#
+######################################################################

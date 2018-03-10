@@ -1,0 +1,16 @@
+Geral|
+Animes|
+Esportes|
+Estudo|
+Infantil|
+Informática|
+Internet|
+Jogos|
+Lazer|
+Música|
+Serviços|
+Sexo|
+Tecnologia|
+Trabalho|
+WebMasters|
+Outros|

@@ -1,0 +1,20 @@
+# These variables NEED to be set in order for index.cgi to work.
+
+##############################
+# Directory to index - full server path
+# The script will index all directories below this directory as well.
+
+$basedir = "/big/dom/xdomain/www/ubb";
+
+##############################
+# URL to the above directory
+
+$BaseURL = "http://www.hostfacts.com/ubb";
+
+##############################
+# Allowed Extentions - will only index files ending with these extentions.
+# Do not type the dot. Separate with a | symbol if more than one.
+
+$ext = "htm|html|shtml|php|php3|asp|txt";
+
+1;

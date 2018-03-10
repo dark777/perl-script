@@ -1,0 +1,25 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="pt-br">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Scripts Nan - CGI Busca v2.0</title>
+</head>
+
+<body>
+
+<p align="center">
+<img border="0" src="imagens/logo.jpg" width="461" height="76"></p>
+<p align="center">
+<img border="0" src="imagens/linha.jpg" width="496" height="4"></p>
+<p align="center">
+<a href="index.cgi">
+<img border="0" src="imagens/b_busca.jpg" width="114" height="35"></a><a href="adicionar.cgi"><img border="0" src="imagens/b_adicionar.jpg" width="114" height="35"></a><a href="modificar.cgi"><img border="0" src="imagens/b_modificar.jpg" width="114" height="35"></a><a href="novos.cgi"><img border="0" src="imagens/b_novos.jpg" width="114" height="35"></a></p>
+<form method="POST" action="buscar.cgi">
+  <p align="center">
+
+  <input type="text" align="middle"  name="procurar" size="20" style="border:1px solid #009900; font-family: Verdana; font-size: 8 pt; background-image: url('imagens/fundo_form.jpg')">
+  <input border="0" src="imagens/b_ok.jpg" name="OK" align="absmiddle" width="26" height="26" type="image"></p>
+</form>

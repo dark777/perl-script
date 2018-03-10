@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Sample Search Box</title>
+</head>
+<body>
+<center>
+
+<!-- Begin Search Form -->
+
+<form action="/cgi-bin/search.cgi">
+<table border=0>
+<tr>
+<td><b>Search for:</b></td>
+<td><input type=text name=Q></td>
+</tr>
+<tr>
+<td><b>Search:</b></td>
+<td><select name=E>
+<option value=1>Entire Document</option>
+<option value=0>Title Only</option>
+</select></td>
+</tr>
+<tr>
+<td><b>Match:</b></td>
+<td><select name=X>
+<option value=0>Any Terms</option>
+<option value=1>Exact Phrase</option>
+</select></td>
+</tr>
+<tr>
+<td colspan=2><input type=submit value="  Search  "></td>
+</tr>
+</table>
+</form>
+
+<!-- End Search Form -->
+
+</center>
+</body>
+</html>
