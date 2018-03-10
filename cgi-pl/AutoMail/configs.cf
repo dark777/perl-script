@@ -1,0 +1,4 @@
+/path/to/your/www/automail/autodata.txt
+http://www.your_domain.com/cgi-bin/automail/automail.pl
+/usr/sbin/sendmail
+your_email@domain.com
