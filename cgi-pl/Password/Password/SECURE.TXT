@@ -1,0 +1,24 @@
+<HTML>
+	<Head><Title>Login</Title></Head>
+	<Body bgcolor=000000 text=FFFFFF link=#FF0080 vlink=#FF0080>
+	<CENTER>
+	<H1><FONT COLOR=0000FF>Secure</FONT></H1>
+	</CENTER>
+	<P>
+	<UL>
+	<A HREF="http://www.rlaj.com/scripts">Ranson's Scripts</A>
+	<P>
+	<UL>
+	<A HREF="http://www.mamsofco.com">Mamsofco Shareware</A>
+	<P>
+	<UL>
+	<A HREF="http://www.ro.com/artsearch">ArtSearch Home</A>
+	<P>
+	<UL>
+	<A HREF="http://www.ro.com/av/home">aArtvark Network</A>
+	<P>
+	<UL>
+	<A HREF="http://www.ro.com/av/gems">Wholesale Gemstones</A>
+	</UL></UL></UL></UL></UL>
+	</Body>
+	</HTML>
