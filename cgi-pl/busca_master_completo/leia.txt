@@ -1,0 +1,81 @@
+====================================
+BuscMaster v1.6 [PERL]
+====================================
+
+##############################################
+# SITE: CGi-Master - www.cgimaster.com.br    #
+# AUTOR: HENRIQUE FERNANDES SILVEIRA         #
+##############################################
+
+--------
+Conteudo
+--------
+O QUE HÁ DE NOVO?
+
+REQUERIMENTOS
+
+ARQUIVOS
+
+INSTALAÇÃO
+
+-----------------
+O QUE HÁ DE NOVO?
+-----------------
+v1.6: Consertado o Bug que fazia download do arquivo incluir.cgi
+
+v1.5: Envia e-mail para o usuário e para o webmaster ao cadastrar um site
+ 
+v1.4: Não deixa mais cadastrar sites com os campos em branco
+
+v1.3: O buscmaster não mostra mais o e-mail do responsável pelo site
+e alguns bugs foram corrigidos.
+
+v1.2: CORRIGIMOS OS BUGS REPORTADOS PELOS USUÁRIOS E FOI RETIRADO O
+ARQUIVO semresult.htm QUE FICAVA A MENSSAGEM DE NÃO ENCONTRADO.
+O BUSCMASTER AGORA FICOU MAIS FÁCIL DE INSTALAR AGORA VOCÊ SÓ
+PRECISA MODIFICAR O ARQUIVO config.txt.
+
+v1.1: FOI CORRIGIDO O ERRO DO BOTÃO AVANÇAR E TEM NOVA OPÇAO
+DE ESCOLHER QUANTOS RESULTADOS MOSTRAR.
+
+PARA MAIS ATUALIZAÇÕES OU REPORTAR ERROS VÁ AO FÓRUM HTTP://WWW.CGIMASTER.F2S.COM/FORUM 
+
+------------
+REQUERIMENTOS
+------------
+Win9x, NT OU UNIX/LINUX web server e PERL 5.003
+
+--------------
+ARQUIVOS
+--------------
+
+incluir.cgi   = Inclui mais sites para a busca
+busca.cgi     = Script Primario
+busca2.cgi    = Este script é acionado quando você usa o botão avançar
+layout.htm    = O layout do site está neste arquivo, e você pode edita-lo
+index.htm     = Página inicial do site de busca
+queries.htm   = Este arquivo contém as palavras que foram usadas para pesquisar.
+urls.db       = Contém o banco de dados de sites cadastrados.
+config.txt    = Arquivo onde fica as configurações do BuscMaster
+
+
+------------------
+INSTALAÇÃO
+------------------
+
+ 1: Arrume o caminho para o perl em todos os arquivos .cgi.
+
+ 2: Faça o Upload dos arquivos: layout.htm, busca.cgi, busca2.cgi, queries.htm, e urls.db para
+        seu diretório CGI-BIN.
+
+        NOTA: Usuários UNIX/LINUX, faça o upload dos arquivos .cgi em ASCII e
+        de as permissões permições: 755 (chmod) e em queries.htm, config.txt e urls.db para 666.
+
+ 3: Arrume as váriaveis no arquivo config.txt
+
+ 4: Customize o arquivo LAYOUT.HTM.
+
+Parabéns você terminou, Boa sorte!
+
+
+Qualquer problema vá em http://www.cgimaster.com.br/forum e peça ajuda no fórum

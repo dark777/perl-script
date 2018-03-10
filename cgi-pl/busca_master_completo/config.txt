@@ -1,0 +1,75 @@
+####################### BuscMaster 1.6 #######################
+# config.txt                                                 #
+# Copyright 1999-00, CGi-Master.                             #
+# Este CGI é Gratuito! E se encontra em:                     #
+# http://www.cgimaster.com.br                                #
+##############################################################
+
+######################################
+#      Configurações Básicas         #
+######################################
+
+# Especifique o Nome do Site
+$sitetitle="CGi-Master";
+
+# E-mail do administrador
+$searchemail="webmaster\@cgimaster.f2s.com";
+
+# Especifique a cor da tabela
+$bordercolor="#000000";
+
+# A Cor do Texto na tabela
+$textcolor="white";
+
+# Especifique a URL da página inicial
+$urlini="http://127.0.0.3";
+
+# Especifique a URL do Busca.cgi
+$thaturl="http://127.0.0.3/busca/busca.cgi";
+
+# O URL do Busca2.cgi
+# Ele será usado quando usar o botão avançar
+$thisurl="http://127.0.0.3/busca/busca2.cgi";
+
+# Path para queries.htm
+$queryfile="queries.htm";
+
+# Path para o arquivo onde serão armazenados os dados
+$data="dados/urls.db";
+
+
+# O Path para layout.htm
+$template="layout.htm";
+
+# Menssagem a ser mostrada no e-mail
+$msgmail="Seu Site foi cadastrado no $sitetitle com sucesso!\n",
+	 "Obrigado pela sua contribuição";
+
+# Path para o SendMail
+$mailprog="/usr/lib/sendmail";
+
+# URL do Logotipo do seu site
+$logo="logo.gif";
+
+######################################
+#      Configurações Avançadas       #
+######################################
+
+# Path para o Banco de dados
+$filename = "dados/urls.db";
+
+# Não é recomendado modificar
+Randomize;
+$Num = rand(1000);
+
+# Mostrar no máximo 20000 Resultados
+$maximum=20000;
+
+# Mínimo de caracteres para buscar
+$minimum=3;
+
+# Separação dos dados por pipes (|) - Não modifique
+$delimiter="\\|";
+
+# Não mexa!!!
+$noresults="1";
