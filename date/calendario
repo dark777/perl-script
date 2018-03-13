@@ -1,0 +1,124 @@
+#!/usr/bin/env perl
+# Calendario Inet v1.0
+# Author: Edson Duarte
+# Version 1: Example of Application (PROMPT DRAW PERL MODULE) CURSO:PPAS
+# S.O.: Windows
+# Module Download: www.insecuritynet.com.br
+use prompt_draw_insecuritynet;
+
+sub d_sem
+   {   
+my $anno= $_[0];
+my $mes = $_[1];
+my $dia = $_[2];
+if ($mes <= 2){$mes = $mes + 10; $anno = $anno - 1;}else{$mes = $mes - 2;}
+my $a= int($anno % 100);
+my $b= int($$anno / 100);
+my $resultado = int( 700 + (int(26 * $mes -2) / 10) + $dia + $a + int($a/ 4) + int($b/ 4) - 2 * $b ) % 7;
+$resultado++;
+return $resultado;
+   }
+  
+sub ano_biss{
+my $ano= $_[0];
+$bissexto = 0;
+if ($ano % 400 == 0){$bissexto  = 1;}else{if($ano%4 == 0 && $ano%100!=0){$bissexto  = 1;}}
+return $bissexto;
+}
+
+sub total_mes{
+my $n_dias;
+my $mes= $_[0];
+my $ano= $_[1];
+if($mes==1){$n_dias=31; }
+if($mes==3){$n_dias=31; }
+if($mes==4){$n_dias=30;}
+if($mes==5){$n_dias=31; }
+if($mes==6){$n_dias=30; }
+if($mes==7){$n_dias=31; }
+if($mes==8){$n_dias=31; }
+if($mes==9){$n_dias=30; }
+if($mes==10){$n_dias=31; }
+if($mes==11){$n_dias=30; }
+if($mes==12){$n_dias=31; }
+if($mes==2){$n_dias=28; 
+my $b=ano_biss($ano);
+if($b==1){  $n_dias=29;   }
+}
+return $n_dias;
+}
+
+sub nome_mes{
+my $mes= $_[0];
+my $nome;
+if($mes==1){$nome="Janeiro";}
+if($mes==2){$nome="Fevereiro";}
+if($mes==3){$nome="Marco";}
+if($mes==4){$nome="Abril";}
+if($mes==5){$nome="Maio";}
+if($mes==6){$nome="Junho";}
+if($mes==7){$nome="Julho";}
+if($mes==8){$nome="Agosto";}
+if($mes==9){$nome="Setembro";}
+if($mes==10){$nome="Outubro";}
+if($mes==11){$nome="Novembro";}
+if($mes==12){$nome="Dezembro";}
+return $nome;
+}
+
+sub exib_mes{
+my $mes= $_[0];
+my $ano= $_[1];
+my $px=2; $py=3; $x; $p1x=1;
+my $fator=0;
+for($x=1;$x<=12;$x++){
+if($mes ==$x){ 
+$px=2+(($p1x -1)*26);
+$px=$px; $py=$py+(12*$fator);}
+$p1x++;
+if($p1x==4){$p1x=1; $fator++;}
+}
+
+inet_gotoxy($px,$py); 
+inet_color_local(7,2);
+print nome_mes($mes);
+my $pfx=0;
+inet_gotoxy($px+3*$pfx,$py+2); inet_color_local(7,4); print "D"; $pfx++; inet_color_local(7,0);
+inet_gotoxy($px+3*$pfx,$py+2); print "S"; $pfx++;
+inet_gotoxy($px+3*$pfx,$py+2); print "T"; $pfx++;
+inet_gotoxy($px+3*$pfx,$py+2); print "Q"; $pfx++;
+inet_gotoxy($px+3*$pfx,$py+2); print "Q"; $pfx++;
+inet_gotoxy($px+3*$pfx,$py+2); print "S"; $pfx++;
+inet_gotoxy($px+3*$pfx,$py+2); inet_color_local(7,1); print "S"; $pfx++; inet_color_local(7,0);
+
+my $tm=total_mes($mes,$ano);
+my $npy = $py+3;
+my $i;
+for($i=1;$i<=$tm;$i++){
+my $dds = &d_sem($ano,$mes,$i );
+my $npx = $dds * 3 + ($px-3);
+if($dds==1){ $npy++;}
+inet_gotoxy($npx,$npy);
+inet_color_local(7,0); 
+if($dds==1){inet_color_local(7,4); }
+if($dds==7){inet_color_local(7,1); }
+print "$i";
+}
+}
+
+system "MODE CON LINES=50 COLS=75";
+inet_color_geral(7,0);
+START:
+inet_gotoxy(2,1);
+print "Informe o ano:";
+chomp ( my $ano= );
+system "cls";
+inet_gotoxy(28,1);
+inet_color_local(7,2); 
+print "ANO:$ano";
+my $i;
+for($i=1;$i<=12;$i++){&exib_mes($i,$ano);}
+inet_color_local(7,8); inet_gotoxy(50,49);
+print "www.insecuritynet.com.br"; 
+inet_color_local(7,0);
+goto START; 
