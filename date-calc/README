@@ -1,4 +1,8 @@
 
+Verify a module's existence is to do:
+
+bash-4.4# perl -MDate::Calc -e 1
+
 Local Modules perl.pm:
 /usr/share/perl5/Date/
 /usr/lib64/perl5/Date/
