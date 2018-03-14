@@ -10,8 +10,3 @@ bash-4.4# perl -MDateTime -e 1
 bash-4.4# cpan install DateTime
 
 http://ftp.devil-linux.org/pub/devel/sources/1.2/perl-ext/Date-Calc-5.4.tar.gz
-http://ftp.riken.jp/Linux/mandrake/devel/cooker/SRPMS/main/release/perl-Date-Calc-6.300.0-5.src.rpm
-http://ftp.riken.jp/Linux/mandrake/devel/cooker/SRPMS/main/release/perl-DateTime-TimeZone-1.270.0-4.src.rpm
-
-rpm -ivh perl-Date-Calc-6.300.0-5.src.rpm
-rpm -ivh perl-DateTime-TimeZone-1.270.0-4.src.rpm
