@@ -1,0 +1,44 @@
+#!/usr/bin/perl -w
+use strict;
+use Date::Calc qw(Calendar);
+#usage perl perldate3 monthnum  year; 
+#perl perldate3 8 2002 for AUG2002
+#defaults to current month
+
+
+my $month = shift || (localtime(time))[4]+ 1; #numeric for subroutine
+
+my $year = shift || (localtime(time))[5] +1900;
+
+my @cal = parseCalendar();
+
+my @months = (undef,'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug', 'Sep', 'Oct', 'Nov', 'Dec');
+$month = $months[$month]; #change $month to 3-letter abbreviation
+
+print "\n$month$year: ",'Mo  Tu  We  Th  Fr  Sa  Su',"\n"; 
+my $i = 1;
+
+
+foreach my $cal_line (@cal)
+{
+print "  Week",$i++,": ";
+foreach my $day (@$cal_line)
+{
+ $day ||= "  ";
+ print "$day  ";
+}
+ print "\n";
+}
+print "\n";
+exit;
+
+#####################################################################
+
+sub parseCalendar
+{
+ my $cal = Calendar($year, $month);
+ my @cal = split(/\n/, $cal);
+ splice(@cal, 0, 3); # get rid of the first three lines (don't need em)+;
+ my @rv = map{$_ = substr($_, 1, length);[split /\s{4}|\s{2}/];}@cal;
+ return @rv;
+}

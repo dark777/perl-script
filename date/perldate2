@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Time::Local;
 
-my @names = qw/ JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC/;
+my @names = qw/ January February March April May June July August September October November December/;
 
 my $year = shift ||'2012';
 
