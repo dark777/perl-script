@@ -7,9 +7,12 @@ sub get_date
  @months = ('January','February','March','April','May','June','July','August','September','October','November','December');
 
  ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
- if($hour < 10) { $hour = "0$hour"; }
- if($min < 10) { $min = "0$min"; }
- if($sec < 10) { $sec = "0$sec"; }
+ 
+ if($hour < 10){ $hour = "0$hour"; }
+ 
+ if($min < 10){ $min = "0$min"; }
+ 
+ if($sec < 10){ $sec = "0$sec"; }
  
  #Y2K COMPLIANT
  $year = $year + 1900;
