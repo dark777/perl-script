@@ -5,6 +5,7 @@
 # Version 1: Example of Application (PROMPT DRAW PERL MODULE) CURSO:PPAS
 # S.O.: Windows
 # Module Download: www.insecuritynet.com.br
+# http://www.insecuritynet.com.br/materias/calendario-congruencia-de-zeller
 use prompt_draw_insecuritynet;
 
 sub d_sem
