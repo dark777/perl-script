@@ -5,7 +5,7 @@ use Time::Local;
 
 my @names = qw/ January February March April May June July August September October November December/;
 
-my $year = shift ||'2012';
+my $year = shift ||'2013';
 
 for my $month (0..11)
 {
@@ -13,12 +13,33 @@ for my $month (0..11)
  print calendar($year, $month), "\n\n";
 }
 
+sub __isleap
+{
+ my $ano = $_[0];
+
+ if($ano%400 == 0)
+  {
+   return 1;
+  }
+  elsif($ano%4==0 && $ano%100!=0)
+  {
+   return 1;
+  }
+  else
+  {
+   return 0;
+  }
+}
+
 sub calendar
 {
  my ($year, $month) = @_;
  my @mon_days = qw/31 28 31 30 31 30 31 31 30 31 30 31/;
  
- ++$mon_days[1] if $year % 4 == 0 && ($year % 400 == 0 || $year % 1+00 != 0);
+ if(__isleap($year))
+ {
+  $mon_days[1] = 29;
+ }
     
  my $cal = " Sun Mon Tue Wed Thu Fri Sat\n";
  
