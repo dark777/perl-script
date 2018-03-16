@@ -1,1 +1,1 @@
-# Scripts e Settings em perl
+# Perl Scripts and Settings
