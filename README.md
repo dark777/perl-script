@@ -1,2 +1,1 @@
-# perl-script
-scripts e comandos perl
+# Scripts e Settings em perl
