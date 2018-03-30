@@ -2,9 +2,9 @@
 title: Alfabeto em Perl Golf.
 ---
 ### Meu E-mail em Perl Golf
-> 
-Inputs: echo "}oqo4gtutF_gnuu4ius4hx" | perl -pe \ 's/(.)/chr(ord($1)-2*3)/ge'
-Output: wiki.anon@Yahoo.com.br 
+> Input: echo "}oqo4gtutF_gnuu4ius4hx" | perl -pe \ 's/(.)/chr(ord($1)-2*3)/ge'
+
+> Output: wiki.anon@Yahoo.com.br 
 
 ### Letra
 > corresponde ao input
