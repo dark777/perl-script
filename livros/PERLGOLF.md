@@ -1,9 +1,16 @@
 ---
 title: Alfabeto em Perl Golf.
 ---
-### Meu Exemplo
+### Meu E-mail em Perl Golf
 > Saida: echo "}oqo4gtutF_gnuu4ius4hx" | perl -pe \ 's/(.)/chr(ord($1)-2*3)/ge'
 
+### Letra
+> corresponde ao input
+
+### Caractere
+> corresponde ao output
+
+### Alfabeto completo
 ```
 +-------+-----------+
 | Letra | caractere |
