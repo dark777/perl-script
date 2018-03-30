@@ -6,9 +6,9 @@ use Date::Calc qw(Calendar);
 #defaults to current month
 
 
-my $month = shift || (localtime(time))[4]+ 1; #numeric for subroutine
+my $month = shift || (localtime(time))[4]+1; #numeric for subroutine
 
-my $year = shift || (localtime(time))[5] +1900;
+my $year = shift || (localtime(time))[5]+1900;
 
 my @cal = parseCalendar();
 
