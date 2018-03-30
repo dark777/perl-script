@@ -6,6 +6,7 @@
 # S.O.: Windows
 # Module Download: www.insecuritynet.com.br
 # http://www.insecuritynet.com.br/materias/calendario-congruencia-de-zeller
+# http://www.insecuritynet.com.br/materias/guns-roses-programacao-musica-linguagem-perl
 use prompt_draw_insecuritynet;
 
 sub d_sem
@@ -217,7 +218,7 @@ inet_gotoxy(2,1);
  
 print "Informe o ano:";
 chomp( my $ano= );
-system "cls";
+system "clear";
  
 inet_gotoxy(28,1);
 inet_color_local(7,2); 
