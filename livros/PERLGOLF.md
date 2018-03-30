@@ -6,11 +6,9 @@ title: Alfabeto em Perl Golf.
 
 > Output: wiki.anon@Yahoo.com.br 
 
-### Letra
-> corresponde ao input
+> Letra: corresponde ao input
 
-### Caractere
-> corresponde ao output
+> Caractere: corresponde ao output
 
 ### Alfabeto completo
 ```
